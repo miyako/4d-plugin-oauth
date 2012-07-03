@@ -1,0 +1,2465 @@
+<html xmlns:date="http://exslt.org/dates-and-times">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="./CSS/default.css">
+<title>OAuth</title>
+</head>
+<body>
+<h1>OAuth</h1>
+<p>
+<span class="title">Plugin Identifier: </span>20000</p>
+<p>
+<span class="title">Summary</span>
+</p>
+<ex4D:plugin-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for OAuth here -->
+<p>This plugin is a combined edition of the cURL, JSON, ZIP, Common Crypto and MISC plugins.
+It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
+</ex4D:plugin-description>
+<a name="command:1"></a>
+<h2>cURL</h2>
+<a name="command:1,5"></a>
+<h3>cURL</h3>
+<p>
+<code>LONGINT:=cURL (TEXT; ARRAY; ARRAY; BLOB; BLOB; ARRAY; ARRAY; ARRAY; ARRAY)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for cURL here -->
+</ex4D:command-description>
+<a name="command:1,4"></a>
+<h3>cURL Escape url</h3>
+<p>
+<code>TEXT:=cURL Escape url (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for cURL Escape url here -->
+</ex4D:command-description>
+<a name="command:1,1"></a>
+<h3>cURL Get date</h3>
+<p>
+<code>LONGINT:=cURL Get date (TEXT; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for cURL Get date here -->
+</ex4D:command-description>
+<a name="command:1,2"></a>
+<h3>cURL Get version</h3>
+<p>
+<code>TEXT:=cURL Get version</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for cURL Get version here -->
+</ex4D:command-description>
+<a name="command:1,3"></a>
+<h3>cURL Unescape url</h3>
+<p>
+<code>TEXT:=cURL Unescape url (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for cURL Unescape url here -->
+</ex4D:command-description>
+<a name="command:2"></a>
+<h2>Common Crypto</h2>
+<a name="command:2,15"></a>
+<h3>HMACMD5</h3>
+<p>
+<code>TEXT:=HMACMD5 (BLOB; BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for HMACMD5 here -->
+</ex4D:command-description>
+<a name="command:2,14"></a>
+<h3>HMACSHA1</h3>
+<p>
+<code>TEXT:=HMACSHA1 (BLOB; BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for HMACSHA1 here -->
+</ex4D:command-description>
+<a name="command:2,13"></a>
+<h3>HMACSHA256</h3>
+<p>
+<code>TEXT:=HMACSHA256 (BLOB; BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for HMACSHA256 here -->
+</ex4D:command-description>
+<a name="command:2,12"></a>
+<h3>HMACSHA384</h3>
+<p>
+<code>TEXT:=HMACSHA384 (BLOB; BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for HMACSHA384 here -->
+</ex4D:command-description>
+<a name="command:2,11"></a>
+<h3>HMACSHA512</h3>
+<p>
+<code>TEXT:=HMACSHA512 (BLOB; BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for HMACSHA512 here -->
+</ex4D:command-description>
+<a name="command:2,8"></a>
+<h3>MD5</h3>
+<p>
+<code>TEXT:=MD5 (BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for MD5 here -->
+</ex4D:command-description>
+<a name="command:2,7"></a>
+<h3>SHA1</h3>
+<p>
+<code>TEXT:=SHA1 (BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for SHA1 here -->
+</ex4D:command-description>
+<a name="command:2,6"></a>
+<h3>SHA256</h3>
+<p>
+<code>TEXT:=SHA256 (BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for SHA256 here -->
+</ex4D:command-description>
+<a name="command:2,10"></a>
+<h3>SHA384</h3>
+<p>
+<code>TEXT:=SHA384 (BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for SHA384 here -->
+</ex4D:command-description>
+<a name="command:2,9"></a>
+<h3>SHA512</h3>
+<p>
+<code>TEXT:=SHA512 (BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for SHA512 here -->
+</ex4D:command-description>
+<a name="command:3"></a>
+<h2>ZIP</h2>
+<a name="command:3,17"></a>
+<h3>Unzip</h3>
+<p>
+<code>LONGINT:=Unzip (TEXT; TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for Unzip here -->
+</ex4D:command-description>
+<a name="command:3,16"></a>
+<h3>Zip</h3>
+<p>
+<code>LONGINT:=Zip (TEXT; TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for Zip here -->
+</ex4D:command-description>
+<a name="command:4"></a>
+<h2>JSON</h2>
+<a name="command:4,21"></a>
+<h3>JSON Append bool</h3>
+<p>
+<code>TEXT:=JSON Append bool (TEXT; TEXT; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append bool here -->
+</ex4D:command-description>
+<a name="command:4,28"></a>
+<h3>JSON Append bool array</h3>
+<p>
+<code>TEXT:=JSON Append bool array (TEXT; TEXT; ARRAY)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append bool array here -->
+</ex4D:command-description>
+<a name="command:4,23"></a>
+<h3>JSON Append long</h3>
+<p>
+<code>TEXT:=JSON Append long (TEXT; TEXT; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append long here -->
+</ex4D:command-description>
+<a name="command:4,26"></a>
+<h3>JSON Append long array</h3>
+<p>
+<code>TEXT:=JSON Append long array (TEXT; TEXT; ARRAY)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append long array here -->
+</ex4D:command-description>
+<a name="command:4,20"></a>
+<h3>JSON Append node</h3>
+<p>
+<code>TEXT:=JSON Append node (TEXT; TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append node here -->
+</ex4D:command-description>
+<a name="command:4,22"></a>
+<h3>JSON Append real</h3>
+<p>
+<code>TEXT:=JSON Append real (TEXT; TEXT; REAL)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append real here -->
+</ex4D:command-description>
+<a name="command:4,27"></a>
+<h3>JSON Append real array</h3>
+<p>
+<code>TEXT:=JSON Append real array (TEXT; TEXT; ARRAY)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append real array here -->
+</ex4D:command-description>
+<a name="command:4,24"></a>
+<h3>JSON Append text</h3>
+<p>
+<code>TEXT:=JSON Append text (TEXT; TEXT; TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append text here -->
+</ex4D:command-description>
+<a name="command:4,25"></a>
+<h3>JSON Append text array</h3>
+<p>
+<code>TEXT:=JSON Append text array (TEXT; TEXT; ARRAY)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append text array here -->
+</ex4D:command-description>
+<a name="command:4,18"></a>
+<h3>JSON CLEAR</h3>
+<p>
+<code>JSON CLEAR (TEXT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON CLEAR here -->
+</ex4D:command-description>
+<a name="command:4,53"></a>
+<h3>JSON CLOSE</h3>
+<p>
+<code>JSON CLOSE (TEXT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON CLOSE here -->
+</ex4D:command-description>
+<a name="command:4,37"></a>
+<h3>JSON DELETE ITEM BY NAME</h3>
+<p>
+<code>JSON DELETE ITEM BY NAME (TEXT; TEXT; LONGINT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON DELETE ITEM BY NAME here -->
+</ex4D:command-description>
+<a name="command:4,36"></a>
+<h3>JSON DELETE ITEM BY POSITION</h3>
+<p>
+<code>JSON DELETE ITEM BY POSITION (TEXT; LONGINT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON DELETE ITEM BY POSITION here -->
+</ex4D:command-description>
+<a name="command:4,54"></a>
+<h3>JSON Export to text</h3>
+<p>
+<code>TEXT:=JSON Export to text (TEXT; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Export to text here -->
+</ex4D:command-description>
+<a name="command:4,51"></a>
+<h3>JSON GET BOOL ARRAY</h3>
+<p>
+<code>JSON GET BOOL ARRAY (TEXT; ARRAY)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON GET BOOL ARRAY here -->
+</ex4D:command-description>
+<a name="command:4,50"></a>
+<h3>JSON GET CHILD NODES</h3>
+<p>
+<code>JSON GET CHILD NODES (TEXT; ARRAY; ARRAY; ARRAY)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON GET CHILD NODES here -->
+</ex4D:command-description>
+<a name="command:4,49"></a>
+<h3>JSON GET LONG ARRAY</h3>
+<p>
+<code>JSON GET LONG ARRAY (TEXT; ARRAY)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON GET LONG ARRAY here -->
+</ex4D:command-description>
+<a name="command:4,44"></a>
+<h3>JSON GET REAL ARRAY</h3>
+<p>
+<code>JSON GET REAL ARRAY (TEXT; ARRAY)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON GET REAL ARRAY here -->
+</ex4D:command-description>
+<a name="command:4,45"></a>
+<h3>JSON GET TEXT ARRAY</h3>
+<p>
+<code>JSON GET TEXT ARRAY (TEXT; ARRAY)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON GET TEXT ARRAY here -->
+</ex4D:command-description>
+<a name="command:4,43"></a>
+<h3>JSON Get bool</h3>
+<p>
+<code>LONGINT:=JSON Get bool (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Get bool here -->
+</ex4D:command-description>
+<a name="command:4,48"></a>
+<h3>JSON Get child by name</h3>
+<p>
+<code>TEXT:=JSON Get child by name (TEXT; TEXT; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Get child by name here -->
+</ex4D:command-description>
+<a name="command:4,47"></a>
+<h3>JSON Get child by position</h3>
+<p>
+<code>TEXT:=JSON Get child by position (TEXT; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Get child by position here -->
+</ex4D:command-description>
+<a name="command:4,46"></a>
+<h3>JSON Get comment</h3>
+<p>
+<code>TEXT:=JSON Get comment (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Get comment here -->
+</ex4D:command-description>
+<a name="command:4,41"></a>
+<h3>JSON Get long</h3>
+<p>
+<code>LONGINT:=JSON Get long (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Get long here -->
+</ex4D:command-description>
+<a name="command:4,39"></a>
+<h3>JSON Get name</h3>
+<p>
+<code>TEXT:=JSON Get name (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Get name here -->
+</ex4D:command-description>
+<a name="command:4,42"></a>
+<h3>JSON Get real</h3>
+<p>
+<code>REAL:=JSON Get real (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (REAL)<br>
+<ex4D:return-value label="" type="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (REAL) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Get real here -->
+</ex4D:command-description>
+<a name="command:4,38"></a>
+<h3>JSON Get text</h3>
+<p>
+<code>TEXT:=JSON Get text (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Get text here -->
+</ex4D:command-description>
+<a name="command:4,40"></a>
+<h3>JSON Get type</h3>
+<p>
+<code>LONGINT:=JSON Get type (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Get type here -->
+</ex4D:command-description>
+<a name="command:4,52"></a>
+<h3>JSON New</h3>
+<p>
+<code>TEXT:=JSON New</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON New here -->
+</ex4D:command-description>
+<a name="command:4,55"></a>
+<h3>JSON Parse text</h3>
+<p>
+<code>TEXT:=JSON Parse text (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Parse text here -->
+</ex4D:command-description>
+<a name="command:4,19"></a>
+<h3>JSON SET BOOL</h3>
+<p>
+<code>JSON SET BOOL (TEXT; LONGINT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON SET BOOL here -->
+</ex4D:command-description>
+<a name="command:4,33"></a>
+<h3>JSON SET COMMENT</h3>
+<p>
+<code>JSON SET COMMENT (TEXT; TEXT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON SET COMMENT here -->
+</ex4D:command-description>
+<a name="command:4,30"></a>
+<h3>JSON SET LONG</h3>
+<p>
+<code>JSON SET LONG (TEXT; LONGINT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON SET LONG here -->
+</ex4D:command-description>
+<a name="command:4,32"></a>
+<h3>JSON SET NAME</h3>
+<p>
+<code>JSON SET NAME (TEXT; TEXT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON SET NAME here -->
+</ex4D:command-description>
+<a name="command:4,34"></a>
+<h3>JSON SET NULL</h3>
+<p>
+<code>JSON SET NULL (TEXT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON SET NULL here -->
+</ex4D:command-description>
+<a name="command:4,29"></a>
+<h3>JSON SET REAL</h3>
+<p>
+<code>JSON SET REAL (TEXT; REAL)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON SET REAL here -->
+</ex4D:command-description>
+<a name="command:4,31"></a>
+<h3>JSON SET TEXT</h3>
+<p>
+<code>JSON SET TEXT (TEXT; TEXT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON SET TEXT here -->
+</ex4D:command-description>
+<a name="command:4,35"></a>
+<h3>JSON SET TYPE</h3>
+<p>
+<code>JSON SET TYPE (TEXT; LONGINT)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON SET TYPE here -->
+</ex4D:command-description>
+<a name="command:4,56"></a>
+<h3>JSON Strip white space</h3>
+<p>
+<code>TEXT:=JSON Strip white space (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Strip white space here -->
+</ex4D:command-description>
+<a name="command:5"></a>
+<h2>MISC</h2>
+<a name="command:5,68"></a>
+<h3>PATH From user selection</h3>
+<p>
+<code>TEXT:=PATH From user selection (TEXT; TEXT; TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for PATH From user selection here -->
+</ex4D:command-description>
+<a name="command:5,67"></a>
+<h3>PATH Get known folder</h3>
+<p>
+<code>TEXT:=PATH Get known folder (LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for PATH Get known folder here -->
+</ex4D:command-description>
+<a name="command:5,57"></a>
+<h3>PICTURE GET RAW DATA</h3>
+<p>
+<code>PICTURE GET RAW DATA (PICTURE; ARRAY; ARRAY)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for PICTURE GET RAW DATA here -->
+</ex4D:command-description>
+<a name="command:5,59"></a>
+<h3>PROCESS GET LIST</h3>
+<p>
+<code>PROCESS GET LIST (ARRAY; ARRAY; ARRAY)</code>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for PROCESS GET LIST here -->
+</ex4D:command-description>
+<a name="command:5,60"></a>
+<h3>PROCESS Get id</h3>
+<p>
+<code>LONGINT:=PROCESS Get id</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for PROCESS Get id here -->
+</ex4D:command-description>
+<a name="command:5,58"></a>
+<h3>STACK Get available size</h3>
+<p>
+<code>LONGINT:=STACK Get available size</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for STACK Get available size here -->
+</ex4D:command-description>
+<a name="command:5,65"></a>
+<h3>STRUCTURE Import definition</h3>
+<p>
+<code>LONGINT:=STRUCTURE Import definition (TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for STRUCTURE Import definition here -->
+</ex4D:command-description>
+<a name="command:5,63"></a>
+<h3>SYSTEM Generate UUID</h3>
+<p>
+<code>TEXT:=SYSTEM Generate UUID</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for SYSTEM Generate UUID here -->
+</ex4D:command-description>
+<a name="command:5,61"></a>
+<h3>SYSTEM Get timestamp</h3>
+<p>
+<code>TEXT:=SYSTEM Get timestamp</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for SYSTEM Get timestamp here -->
+</ex4D:command-description>
+<a name="command:5,62"></a>
+<h3>SYSTEM Get timestring</h3>
+<p>
+<code>TEXT:=SYSTEM Get timestring</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for SYSTEM Get timestring here -->
+</ex4D:command-description>
+<a name="command:5,64"></a>
+<h3>SYSTEM Get unixtime</h3>
+<p>
+<code>TEXT:=SYSTEM Get unixtime</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for SYSTEM Get unixtime here -->
+</ex4D:command-description>
+<a name="command:5,69"></a>
+<h3>VOLUME Is ejectable</h3>
+<p>
+<code>LONGINT:=VOLUME Is ejectable (TEXT; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for VOLUME Is ejectable here -->
+</ex4D:command-description>
+<a name="command:5,66"></a>
+<h3>VOLUME Is remote</h3>
+<p>
+<code>LONGINT:=VOLUME Is remote (TEXT; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (LONGINT)<br>
+<ex4D:return-value label="" type="L" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (LONGINT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for VOLUME Is remote here -->
+</ex4D:command-description>
+<a name="constant:1"></a>
+<h2>cURL Options</h2>
+<p>
+<code><a name="constant:1,5"></a>CURLOPT_PROXYTYPE (101)</code>
+</p>
+<ex4D:constant constant-id="5" name="CURLOPT_PROXYTYPE" type="L" value="101" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PROXYTYPE (101) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,94"></a>CURLOPT_ACCEPT_ENCODING (102)</code>
+</p>
+<ex4D:constant constant-id="94" name="CURLOPT_ACCEPT_ENCODING" type="L" value="102" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_ACCEPT_ENCODING (102) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,141"></a>CURLOPT_HTTP200ALIASES (104)</code>
+</p>
+<ex4D:constant constant-id="141" name="CURLOPT_HTTP200ALIASES" type="L" value="104" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_HTTP200ALIASES (104) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,97"></a>CURLOPT_UNRESTRICTED_AUTH (105)</code>
+</p>
+<ex4D:constant constant-id="97" name="CURLOPT_UNRESTRICTED_AUTH" type="L" value="105" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_UNRESTRICTED_AUTH (105) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,120"></a>CURLOPT_FTP_USE_EPRT (106)</code>
+</p>
+<ex4D:constant constant-id="120" name="CURLOPT_FTP_USE_EPRT" type="L" value="106" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_USE_EPRT (106) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,88"></a>CURLOPT_HTTPAUTH (107)</code>
+</p>
+<ex4D:constant constant-id="88" name="CURLOPT_HTTPAUTH" type="L" value="107" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_HTTPAUTH (107) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,142"></a>CURLOPT_FTP_CREATE_MISSING_DIR (110)</code>
+</p>
+<ex4D:constant constant-id="142" name="CURLOPT_FTP_CREATE_MISSING_DIR" type="L" value="110" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_CREATE_MISSING_DIR (110) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,92"></a>CURLOPT_PROXYAUTH (111)</code>
+</p>
+<ex4D:constant constant-id="92" name="CURLOPT_PROXYAUTH" type="L" value="111" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PROXYAUTH (111) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,123"></a>CURLOPT_FTP_RESPONSE_TIMEOUT (112)</code>
+</p>
+<ex4D:constant constant-id="123" name="CURLOPT_FTP_RESPONSE_TIMEOUT" type="L" value="112" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_RESPONSE_TIMEOUT (112) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,61"></a>CURLOPT_IPRESOLVE (113)</code>
+</p>
+<ex4D:constant constant-id="61" name="CURLOPT_IPRESOLVE" type="L" value="113" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_IPRESOLVE (113) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,67"></a>CURLOPT_MAXFILESIZE (114)</code>
+</p>
+<ex4D:constant constant-id="67" name="CURLOPT_MAXFILESIZE" type="L" value="114" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_MAXFILESIZE (114) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,69"></a>CURLOPT_INFILESIZE_LARGE (115)</code>
+</p>
+<ex4D:constant constant-id="69" name="CURLOPT_INFILESIZE_LARGE" type="L" value="115" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_INFILESIZE_LARGE (115) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,74"></a>CURLOPT_RESUME_FROM_LARGE (116)</code>
+</p>
+<ex4D:constant constant-id="74" name="CURLOPT_RESUME_FROM_LARGE" type="L" value="116" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RESUME_FROM_LARGE (116) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,66"></a>CURLOPT_MAXFILESIZE_LARGE (117)</code>
+</p>
+<ex4D:constant constant-id="66" name="CURLOPT_MAXFILESIZE_LARGE" type="L" value="117" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_MAXFILESIZE_LARGE (117) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,81"></a>CURLOPT_NETRC_FILE (118)</code>
+</p>
+<ex4D:constant constant-id="81" name="CURLOPT_NETRC_FILE" type="L" value="118" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_NETRC_FILE (118) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,63"></a>CURLOPT_USE_SSL (119)</code>
+</p>
+<ex4D:constant constant-id="63" name="CURLOPT_USE_SSL" type="L" value="119" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_USE_SSL (119) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,144"></a>CURLOPT_POSTFIELDSIZE_LARGE (120)</code>
+</p>
+<ex4D:constant constant-id="144" name="CURLOPT_POSTFIELDSIZE_LARGE" type="L" value="120" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_POSTFIELDSIZE_LARGE (120) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,13"></a>CURLOPT_TCP_NODELAY (121)</code>
+</p>
+<ex4D:constant constant-id="13" name="CURLOPT_TCP_NODELAY" type="L" value="121" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TCP_NODELAY (121) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,126"></a>CURLOPT_FTPSSLAUTH (129)</code>
+</p>
+<ex4D:constant constant-id="126" name="CURLOPT_FTPSSLAUTH" type="L" value="129" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTPSSLAUTH (129) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,37"></a>CURLOPT_TIMEOUT (13)</code>
+</p>
+<ex4D:constant constant-id="37" name="CURLOPT_TIMEOUT" type="L" value="13" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TIMEOUT (13) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,128"></a>CURLOPT_FTP_ACCOUNT (134)</code>
+</p>
+<ex4D:constant constant-id="128" name="CURLOPT_FTP_ACCOUNT" type="L" value="134" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_ACCOUNT (134) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,107"></a>CURLOPT_COOKIELIST (135)</code>
+</p>
+<ex4D:constant constant-id="107" name="CURLOPT_COOKIELIST" type="L" value="135" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_COOKIELIST (135) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,104"></a>CURLOPT_IGNORE_CONTENT_LENGTH (136)</code>
+</p>
+<ex4D:constant constant-id="104" name="CURLOPT_IGNORE_CONTENT_LENGTH" type="L" value="136" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_IGNORE_CONTENT_LENGTH (136) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,125"></a>CURLOPT_FTP_SKIP_PASV_IP (137)</code>
+</p>
+<ex4D:constant constant-id="125" name="CURLOPT_FTP_SKIP_PASV_IP" type="L" value="137" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_SKIP_PASV_IP (137) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,129"></a>CURLOPT_FTP_FILEMETHOD (138)</code>
+</p>
+<ex4D:constant constant-id="129" name="CURLOPT_FTP_FILEMETHOD" type="L" value="138" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_FILEMETHOD (138) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,8"></a>CURLOPT_LOCALPORT (139)</code>
+</p>
+<ex4D:constant constant-id="8" name="CURLOPT_LOCALPORT" type="L" value="139" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_LOCALPORT (139) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,70"></a>CURLOPT_INFILESIZE (14)</code>
+</p>
+<ex4D:constant constant-id="70" name="CURLOPT_INFILESIZE" type="L" value="14" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_INFILESIZE (14) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,9"></a>CURLOPT_LOCALPORTRANGE (140)</code>
+</p>
+<ex4D:constant constant-id="9" name="CURLOPT_LOCALPORTRANGE" type="L" value="140" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_LOCALPORTRANGE (140) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,62"></a>CURLOPT_CONNECT_ONLY (141)</code>
+</p>
+<ex4D:constant constant-id="62" name="CURLOPT_CONNECT_ONLY" type="L" value="141" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_CONNECT_ONLY (141) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,54"></a>CURLOPT_MAX_SEND_SPEED_LARGE (145)</code>
+</p>
+<ex4D:constant constant-id="54" name="CURLOPT_MAX_SEND_SPEED_LARGE" type="L" value="145" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_MAX_SEND_SPEED_LARGE (145) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,55"></a>CURLOPT_MAX_RECV_SPEED_LARGE (146)</code>
+</p>
+<ex4D:constant constant-id="55" name="CURLOPT_MAX_RECV_SPEED_LARGE" type="L" value="146" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_MAX_RECV_SPEED_LARGE (146) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,124"></a>CURLOPT_FTP_ALTERNATIVE_TO_USE (147)</code>
+</p>
+<ex4D:constant constant-id="124" name="CURLOPT_FTP_ALTERNATIVE_TO_USE" type="L" value="147" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_ALTERNATIVE_TO_USE (147) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,47"></a>CURLOPT_SSL_SESSIONID_CACHE (150)</code>
+</p>
+<ex4D:constant constant-id="47" name="CURLOPT_SSL_SESSIONID_CACHE" type="L" value="150" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSL_SESSIONID_CACHE (150) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,22"></a>CURLOPT_SSH_AUTH_TYPES (151)</code>
+</p>
+<ex4D:constant constant-id="22" name="CURLOPT_SSH_AUTH_TYPES" type="L" value="151" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSH_AUTH_TYPES (151) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,24"></a>CURLOPT_SSH_PUBLIC_KEYFILE (152)</code>
+</p>
+<ex4D:constant constant-id="24" name="CURLOPT_SSH_PUBLIC_KEYFILE" type="L" value="152" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSH_PUBLIC_KEYFILE (152) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,25"></a>CURLOPT_SSH_PRIVATE_KEYFILE (153)</code>
+</p>
+<ex4D:constant constant-id="25" name="CURLOPT_SSH_PRIVATE_KEYFILE" type="L" value="153" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSH_PRIVATE_KEYFILE (153) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,127"></a>CURLOPT_FTP_SSL_CCC (154)</code>
+</p>
+<ex4D:constant constant-id="127" name="CURLOPT_FTP_SSL_CCC" type="L" value="154" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_SSL_CCC (154) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,51"></a>CURLOPT_TIMEOUT_MS (155)</code>
+</p>
+<ex4D:constant constant-id="51" name="CURLOPT_TIMEOUT_MS" type="L" value="155" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TIMEOUT_MS (155) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,60"></a>CURLOPT_CONNECTTIMEOUT_MS (156)</code>
+</p>
+<ex4D:constant constant-id="60" name="CURLOPT_CONNECTTIMEOUT_MS" type="L" value="156" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_CONNECTTIMEOUT_MS (156) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,102"></a>CURLOPT_HTTP_TRANSFER_DECODING (157)</code>
+</p>
+<ex4D:constant constant-id="102" name="CURLOPT_HTTP_TRANSFER_DECODING" type="L" value="157" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_HTTP_TRANSFER_DECODING (157) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,103"></a>CURLOPT_HTTP_CONTENT_DECODING (158)</code>
+</p>
+<ex4D:constant constant-id="103" name="CURLOPT_HTTP_CONTENT_DECODING" type="L" value="158" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_HTTP_CONTENT_DECODING (158) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,27"></a>CURLOPT_NEW_FILE_PERMS (159)</code>
+</p>
+<ex4D:constant constant-id="27" name="CURLOPT_NEW_FILE_PERMS" type="L" value="159" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_NEW_FILE_PERMS (159) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,113"></a>CURLOPT_REFERER (16)</code>
+</p>
+<ex4D:constant constant-id="113" name="CURLOPT_REFERER" type="L" value="16" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_REFERER (16) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,28"></a>CURLOPT_NEW_DIRECTORY_PERMS (160)</code>
+</p>
+<ex4D:constant constant-id="28" name="CURLOPT_NEW_DIRECTORY_PERMS" type="L" value="160" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_NEW_DIRECTORY_PERMS (160) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,99"></a>CURLOPT_POSTREDIR (161)</code>
+</p>
+<ex4D:constant constant-id="99" name="CURLOPT_POSTREDIR" type="L" value="161" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_POSTREDIR (161) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,23"></a>CURLOPT_SSH_HOST_PUBLIC_KEY_MD (162)</code>
+</p>
+<ex4D:constant constant-id="23" name="CURLOPT_SSH_HOST_PUBLIC_KEY_MD" type="L" value="162" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSH_HOST_PUBLIC_KEY_MD (162) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,78"></a>CURLOPT_PROXY_TRANSFER_MODE (166)</code>
+</p>
+<ex4D:constant constant-id="78" name="CURLOPT_PROXY_TRANSFER_MODE" type="L" value="166" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PROXY_TRANSFER_MODE (166) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,41"></a>CURLOPT_CRLFILE (169)</code>
+</p>
+<ex4D:constant constant-id="41" name="CURLOPT_CRLFILE" type="L" value="169" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_CRLFILE (169) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,117"></a>CURLOPT_FTPPORT (17)</code>
+</p>
+<ex4D:constant constant-id="117" name="CURLOPT_FTPPORT" type="L" value="17" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTPPORT (17) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,40"></a>CURLOPT_ISSUERCERT (170)</code>
+</p>
+<ex4D:constant constant-id="40" name="CURLOPT_ISSUERCERT" type="L" value="170" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_ISSUERCERT (170) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,14"></a>CURLOPT_ADDRESS_SCOPE (171)</code>
+</p>
+<ex4D:constant constant-id="14" name="CURLOPT_ADDRESS_SCOPE" type="L" value="171" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_ADDRESS_SCOPE (171) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,43"></a>CURLOPT_CERTINFO (172)</code>
+</p>
+<ex4D:constant constant-id="43" name="CURLOPT_CERTINFO" type="L" value="172" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_CERTINFO (172) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,84"></a>CURLOPT_USERNAME (173)</code>
+</p>
+<ex4D:constant constant-id="84" name="CURLOPT_USERNAME" type="L" value="173" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_USERNAME (173) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,85"></a>CURLOPT_PASSWORD (174)</code>
+</p>
+<ex4D:constant constant-id="85" name="CURLOPT_PASSWORD" type="L" value="174" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PASSWORD (174) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,86"></a>CURLOPT_PROXYUSERNAME (175)</code>
+</p>
+<ex4D:constant constant-id="86" name="CURLOPT_PROXYUSERNAME" type="L" value="175" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PROXYUSERNAME (175) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,87"></a>CURLOPT_PROXYPASSWORD (176)</code>
+</p>
+<ex4D:constant constant-id="87" name="CURLOPT_PROXYPASSWORD" type="L" value="176" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PROXYPASSWORD (176) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,19"></a>CURLOPT_NOPROXY (177)</code>
+</p>
+<ex4D:constant constant-id="19" name="CURLOPT_NOPROXY" type="L" value="177" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_NOPROXY (177) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,116"></a>CURLOPT_TFTP_BLKSIZE (178)</code>
+</p>
+<ex4D:constant constant-id="116" name="CURLOPT_TFTP_BLKSIZE" type="L" value="178" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TFTP_BLKSIZE (178) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,20"></a>CURLOPT_SOCKS5_GSSAPI_SERVICE (179)</code>
+</p>
+<ex4D:constant constant-id="20" name="CURLOPT_SOCKS5_GSSAPI_SERVICE" type="L" value="179" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SOCKS5_GSSAPI_SERVICE (179) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,112"></a>CURLOPT_USERAGENT (18)</code>
+</p>
+<ex4D:constant constant-id="112" name="CURLOPT_USERAGENT" type="L" value="18" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_USERAGENT (18) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,7"></a>CURLOPT_SOCKS5_GSSAPI_NEC (180)</code>
+</p>
+<ex4D:constant constant-id="7" name="CURLOPT_SOCKS5_GSSAPI_NEC" type="L" value="180" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SOCKS5_GSSAPI_NEC (180) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,2"></a>CURLOPT_PROTOCOLS (181)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURLOPT_PROTOCOLS" type="L" value="181" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PROTOCOLS (181) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,3"></a>CURLOPT_REDIR_PROTOCOLS (182)</code>
+</p>
+<ex4D:constant constant-id="3" name="CURLOPT_REDIR_PROTOCOLS" type="L" value="182" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_REDIR_PROTOCOLS (182) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,26"></a>CURLOPT_SSH_KNOWNHOSTS (183)</code>
+</p>
+<ex4D:constant constant-id="26" name="CURLOPT_SSH_KNOWNHOSTS" type="L" value="183" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSH_KNOWNHOSTS (183) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,114"></a>CURLOPT_MAIL_FROM (186)</code>
+</p>
+<ex4D:constant constant-id="114" name="CURLOPT_MAIL_FROM" type="L" value="186" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_MAIL_FROM (186) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,137"></a>CURLOPT_MAIL_RCPT (187)</code>
+</p>
+<ex4D:constant constant-id="137" name="CURLOPT_MAIL_RCPT" type="L" value="187" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_MAIL_RCPT (187) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,122"></a>CURLOPT_FTP_USE_PRET (188)</code>
+</p>
+<ex4D:constant constant-id="122" name="CURLOPT_FTP_USE_PRET" type="L" value="188" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_USE_PRET (188) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,130"></a>CURLOPT_RTSP_REQUEST (189)</code>
+</p>
+<ex4D:constant constant-id="130" name="CURLOPT_RTSP_REQUEST" type="L" value="189" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RTSP_REQUEST (189) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,52"></a>CURLOPT_LOW_SPEED_LIMIT (19)</code>
+</p>
+<ex4D:constant constant-id="52" name="CURLOPT_LOW_SPEED_LIMIT" type="L" value="19" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_LOW_SPEED_LIMIT (19) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,131"></a>CURLOPT_RTSP_SESSION_ID (190)</code>
+</p>
+<ex4D:constant constant-id="131" name="CURLOPT_RTSP_SESSION_ID" type="L" value="190" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RTSP_SESSION_ID (190) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,132"></a>CURLOPT_RTSP_STREAM_URI (191)</code>
+</p>
+<ex4D:constant constant-id="132" name="CURLOPT_RTSP_STREAM_URI" type="L" value="191" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RTSP_STREAM_URI (191) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,133"></a>CURLOPT_RTSP_TRANSPORT (192)</code>
+</p>
+<ex4D:constant constant-id="133" name="CURLOPT_RTSP_TRANSPORT" type="L" value="192" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RTSP_TRANSPORT (192) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,134"></a>CURLOPT_RTSP_CLIENT_CSEQ (193)</code>
+</p>
+<ex4D:constant constant-id="134" name="CURLOPT_RTSP_CLIENT_CSEQ" type="L" value="193" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RTSP_CLIENT_CSEQ (193) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,135"></a>CURLOPT_RTSP_SERVER_CSEQ (194)</code>
+</p>
+<ex4D:constant constant-id="135" name="CURLOPT_RTSP_SERVER_CSEQ" type="L" value="194" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RTSP_SERVER_CSEQ (194) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,1"></a>CURLOPT_WILDCARDMATCH (197)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURLOPT_WILDCARDMATCH" type="L" value="197" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_WILDCARDMATCH (197) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,145"></a>CURLOPT_AUTHORIZATION (2)</code>
+</p>
+<ex4D:constant constant-id="145" name="CURLOPT_AUTHORIZATION" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_AUTHORIZATION (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,53"></a>CURLOPT_LOW_SPEED_TIME (20)</code>
+</p>
+<ex4D:constant constant-id="53" name="CURLOPT_LOW_SPEED_TIME" type="L" value="20" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_LOW_SPEED_TIME (20) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,136"></a>CURLOPT_RESOLVE (203)</code>
+</p>
+<ex4D:constant constant-id="136" name="CURLOPT_RESOLVE" type="L" value="203" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RESOLVE (203) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,90"></a>CURLOPT_TLSAUTH_USERNAME (204)</code>
+</p>
+<ex4D:constant constant-id="90" name="CURLOPT_TLSAUTH_USERNAME" type="L" value="204" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TLSAUTH_USERNAME (204) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,91"></a>CURLOPT_TLSAUTH_PASSWORD (205)</code>
+</p>
+<ex4D:constant constant-id="91" name="CURLOPT_TLSAUTH_PASSWORD" type="L" value="205" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TLSAUTH_PASSWORD (205) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,89"></a>CURLOPT_TLSAUTH_TYPE (206)</code>
+</p>
+<ex4D:constant constant-id="89" name="CURLOPT_TLSAUTH_TYPE" type="L" value="206" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TLSAUTH_TYPE (206) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,95"></a>CURLOPT_TRANSFER_ENCODING (207)</code>
+</p>
+<ex4D:constant constant-id="95" name="CURLOPT_TRANSFER_ENCODING" type="L" value="207" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TRANSFER_ENCODING (207) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,75"></a>CURLOPT_RESUME_FROM (21)</code>
+</p>
+<ex4D:constant constant-id="75" name="CURLOPT_RESUME_FROM" type="L" value="21" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RESUME_FROM (21) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,50"></a>CURLOPT_GSSAPI_DELEGATION (210)</code>
+</p>
+<ex4D:constant constant-id="50" name="CURLOPT_GSSAPI_DELEGATION" type="L" value="210" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_GSSAPI_DELEGATION (210) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,64"></a>CURLOPT_ACCEPTTIMEOUT_MS (212)</code>
+</p>
+<ex4D:constant constant-id="64" name="CURLOPT_ACCEPTTIMEOUT_MS" type="L" value="212" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_ACCEPTTIMEOUT_MS (212) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,15"></a>CURLOPT_TCP_KEEPALIVE (213)</code>
+</p>
+<ex4D:constant constant-id="15" name="CURLOPT_TCP_KEEPALIVE" type="L" value="213" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TCP_KEEPALIVE (213) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,16"></a>CURLOPT_TCP_KEEPIDLE (214)</code>
+</p>
+<ex4D:constant constant-id="16" name="CURLOPT_TCP_KEEPIDLE" type="L" value="214" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TCP_KEEPIDLE (214) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,17"></a>CURLOPT_TCP_KEEPINTVL (215)</code>
+</p>
+<ex4D:constant constant-id="17" name="CURLOPT_TCP_KEEPINTVL" type="L" value="215" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TCP_KEEPINTVL (215) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,48"></a>CURLOPT_SSL_OPTIONS (216)</code>
+</p>
+<ex4D:constant constant-id="48" name="CURLOPT_SSL_OPTIONS" type="L" value="216" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSL_OPTIONS (216) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,115"></a>CURLOPT_MAIL_AUTH (217)</code>
+</p>
+<ex4D:constant constant-id="115" name="CURLOPT_MAIL_AUTH" type="L" value="217" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_MAIL_AUTH (217) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,111"></a>CURLOPT_COOKIE (22)</code>
+</p>
+<ex4D:constant constant-id="111" name="CURLOPT_COOKIE" type="L" value="22" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_COOKIE (22) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,147"></a>CURLOPT_HTTPPOST (24)</code>
+</p>
+<ex4D:constant constant-id="147" name="CURLOPT_HTTPPOST" type="L" value="24" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_HTTPPOST (24) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,29"></a>CURLOPT_SSLCERT (25)</code>
+</p>
+<ex4D:constant constant-id="29" name="CURLOPT_SSLCERT" type="L" value="25" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSLCERT (25) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,33"></a>CURLOPT_KEYPASSWD (26)</code>
+</p>
+<ex4D:constant constant-id="33" name="CURLOPT_KEYPASSWD" type="L" value="26" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_KEYPASSWD (26) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,77"></a>CURLOPT_CRLF (27)</code>
+</p>
+<ex4D:constant constant-id="77" name="CURLOPT_CRLF" type="L" value="27" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_CRLF (27) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,140"></a>CURLOPT_QUOTE (28)</code>
+</p>
+<ex4D:constant constant-id="140" name="CURLOPT_QUOTE" type="L" value="28" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_QUOTE (28) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,12"></a>CURLOPT_PORT (3)</code>
+</p>
+<ex4D:constant constant-id="12" name="CURLOPT_PORT" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PORT (3) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,110"></a>CURLOPT_COOKIEFILE (31)</code>
+</p>
+<ex4D:constant constant-id="110" name="CURLOPT_COOKIEFILE" type="L" value="31" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_COOKIEFILE (31) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,36"></a>CURLOPT_SSLVERSION (32)</code>
+</p>
+<ex4D:constant constant-id="36" name="CURLOPT_SSLVERSION" type="L" value="32" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSLVERSION (32) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,65"></a>CURLOPT_TIMECONDITION (33)</code>
+</p>
+<ex4D:constant constant-id="65" name="CURLOPT_TIMECONDITION" type="L" value="33" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TIMECONDITION (33) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,149"></a>CURLOPT_TIMEVALUE (34)</code>
+</p>
+<ex4D:constant constant-id="149" name="CURLOPT_TIMEVALUE" type="L" value="34" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TIMEVALUE (34) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,73"></a>CURLOPT_CUSTOMREQUEST (36)</code>
+</p>
+<ex4D:constant constant-id="73" name="CURLOPT_CUSTOMREQUEST" type="L" value="36" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_CUSTOMREQUEST (36) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,139"></a>CURLOPT_POSTQUOTE (39)</code>
+</p>
+<ex4D:constant constant-id="139" name="CURLOPT_POSTQUOTE" type="L" value="39" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_POSTQUOTE (39) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,18"></a>CURLOPT_PROXY (4)</code>
+</p>
+<ex4D:constant constant-id="18" name="CURLOPT_PROXY" type="L" value="4" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PROXY (4) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,148"></a>CURLOPT_HEADER (42)</code>
+</p>
+<ex4D:constant constant-id="148" name="CURLOPT_HEADER" type="L" value="42" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_HEADER (42) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,71"></a>CURLOPT_NOBODY (44)</code>
+</p>
+<ex4D:constant constant-id="71" name="CURLOPT_NOBODY" type="L" value="44" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_NOBODY (44) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,68"></a>CURLOPT_UPLOAD (46)</code>
+</p>
+<ex4D:constant constant-id="68" name="CURLOPT_UPLOAD" type="L" value="46" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_UPLOAD (46) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,101"></a>CURLOPT_POST (47)</code>
+</p>
+<ex4D:constant constant-id="101" name="CURLOPT_POST" type="L" value="47" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_POST (47) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,118"></a>CURLOPT_DIRLISTONLY (48)</code>
+</p>
+<ex4D:constant constant-id="118" name="CURLOPT_DIRLISTONLY" type="L" value="48" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_DIRLISTONLY (48) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,82"></a>CURLOPT_USERPWD (5)</code>
+</p>
+<ex4D:constant constant-id="82" name="CURLOPT_USERPWD" type="L" value="5" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_USERPWD (5) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,119"></a>CURLOPT_APPEND (50)</code>
+</p>
+<ex4D:constant constant-id="119" name="CURLOPT_APPEND" type="L" value="50" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_APPEND (50) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,80"></a>CURLOPT_NETRC (51)</code>
+</p>
+<ex4D:constant constant-id="80" name="CURLOPT_NETRC" type="L" value="51" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_NETRC (51) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,96"></a>CURLOPT_FOLLOWLOCATION (52)</code>
+</p>
+<ex4D:constant constant-id="96" name="CURLOPT_FOLLOWLOCATION" type="L" value="52" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FOLLOWLOCATION (52) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,79"></a>CURLOPT_TRANSFERTEXT (53)</code>
+</p>
+<ex4D:constant constant-id="79" name="CURLOPT_TRANSFERTEXT" type="L" value="53" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_TRANSFERTEXT (53) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,100"></a>CURLOPT_PUT (54)</code>
+</p>
+<ex4D:constant constant-id="100" name="CURLOPT_PUT" type="L" value="54" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PUT (54) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,93"></a>CURLOPT_AUTOREFERER (58)</code>
+</p>
+<ex4D:constant constant-id="93" name="CURLOPT_AUTOREFERER" type="L" value="58" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_AUTOREFERER (58) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,4"></a>CURLOPT_PROXYPORT (59)</code>
+</p>
+<ex4D:constant constant-id="4" name="CURLOPT_PROXYPORT" type="L" value="59" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PROXYPORT (59) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,83"></a>CURLOPT_PROXYUSERPWD (6)</code>
+</p>
+<ex4D:constant constant-id="83" name="CURLOPT_PROXYUSERPWD" type="L" value="6" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PROXYUSERPWD (6) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,143"></a>CURLOPT_POSTFIELDSIZE (60)</code>
+</p>
+<ex4D:constant constant-id="143" name="CURLOPT_POSTFIELDSIZE" type="L" value="60" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_POSTFIELDSIZE (60) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,6"></a>CURLOPT_HTTPPROXYTUNNEL (61)</code>
+</p>
+<ex4D:constant constant-id="6" name="CURLOPT_HTTPPROXYTUNNEL" type="L" value="61" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_HTTPPROXYTUNNEL (61) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,21"></a>CURLOPT_INTERFACE (62)</code>
+</p>
+<ex4D:constant constant-id="21" name="CURLOPT_INTERFACE" type="L" value="62" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_INTERFACE (62) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,49"></a>CURLOPT_KRBLEVEL (63)</code>
+</p>
+<ex4D:constant constant-id="49" name="CURLOPT_KRBLEVEL" type="L" value="63" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_KRBLEVEL (63) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,38"></a>CURLOPT_SSL_VERIFYPEER (64)</code>
+</p>
+<ex4D:constant constant-id="38" name="CURLOPT_SSL_VERIFYPEER" type="L" value="64" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSL_VERIFYPEER (64) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,39"></a>CURLOPT_CAINFO (65)</code>
+</p>
+<ex4D:constant constant-id="39" name="CURLOPT_CAINFO" type="L" value="65" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_CAINFO (65) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,98"></a>CURLOPT_MAXREDIRS (68)</code>
+</p>
+<ex4D:constant constant-id="98" name="CURLOPT_MAXREDIRS" type="L" value="68" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_MAXREDIRS (68) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,72"></a>CURLOPT_FILETIME (69)</code>
+</p>
+<ex4D:constant constant-id="72" name="CURLOPT_FILETIME" type="L" value="69" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FILETIME (69) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,76"></a>CURLOPT_RANGE (7)</code>
+</p>
+<ex4D:constant constant-id="76" name="CURLOPT_RANGE" type="L" value="7" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RANGE (7) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,56"></a>CURLOPT_MAXCONNECTS (71)</code>
+</p>
+<ex4D:constant constant-id="56" name="CURLOPT_MAXCONNECTS" type="L" value="71" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_MAXCONNECTS (71) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,57"></a>CURLOPT_FRESH_CONNECT (74)</code>
+</p>
+<ex4D:constant constant-id="57" name="CURLOPT_FRESH_CONNECT" type="L" value="74" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FRESH_CONNECT (74) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,58"></a>CURLOPT_FORBID_REUSE (75)</code>
+</p>
+<ex4D:constant constant-id="58" name="CURLOPT_FORBID_REUSE" type="L" value="75" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FORBID_REUSE (75) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,44"></a>CURLOPT_RANDOM_FILE (76)</code>
+</p>
+<ex4D:constant constant-id="44" name="CURLOPT_RANDOM_FILE" type="L" value="76" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_RANDOM_FILE (76) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,45"></a>CURLOPT_EGDSOCKET (77)</code>
+</p>
+<ex4D:constant constant-id="45" name="CURLOPT_EGDSOCKET" type="L" value="77" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_EGDSOCKET (77) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,59"></a>CURLOPT_CONNECTTIMEOUT (78)</code>
+</p>
+<ex4D:constant constant-id="59" name="CURLOPT_CONNECTTIMEOUT" type="L" value="78" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_CONNECTTIMEOUT (78) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,106"></a>CURLOPT_HTTPGET (80)</code>
+</p>
+<ex4D:constant constant-id="106" name="CURLOPT_HTTPGET" type="L" value="80" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_HTTPGET (80) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,42"></a>CURLOPT_SSL_VERIFYHOST (81)</code>
+</p>
+<ex4D:constant constant-id="42" name="CURLOPT_SSL_VERIFYHOST" type="L" value="81" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSL_VERIFYHOST (81) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,109"></a>CURLOPT_COOKIEJAR (82)</code>
+</p>
+<ex4D:constant constant-id="109" name="CURLOPT_COOKIEJAR" type="L" value="82" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_COOKIEJAR (82) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,46"></a>CURLOPT_SSL_CIPHER_LIST (83)</code>
+</p>
+<ex4D:constant constant-id="46" name="CURLOPT_SSL_CIPHER_LIST" type="L" value="83" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSL_CIPHER_LIST (83) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,105"></a>CURLOPT_HTTP_VERSION (84)</code>
+</p>
+<ex4D:constant constant-id="105" name="CURLOPT_HTTP_VERSION" type="L" value="84" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_HTTP_VERSION (84) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,121"></a>CURLOPT_FTP_USE_EPSV (85)</code>
+</p>
+<ex4D:constant constant-id="121" name="CURLOPT_FTP_USE_EPSV" type="L" value="85" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_FTP_USE_EPSV (85) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,30"></a>CURLOPT_SSLCERTTYPE (86)</code>
+</p>
+<ex4D:constant constant-id="30" name="CURLOPT_SSLCERTTYPE" type="L" value="86" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSLCERTTYPE (86) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,31"></a>CURLOPT_SSLKEY (87)</code>
+</p>
+<ex4D:constant constant-id="31" name="CURLOPT_SSLKEY" type="L" value="87" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSLKEY (87) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,32"></a>CURLOPT_SSLKEYTYPE (88)</code>
+</p>
+<ex4D:constant constant-id="32" name="CURLOPT_SSLKEYTYPE" type="L" value="88" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSLKEYTYPE (88) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,34"></a>CURLOPT_SSLENGINE (89)</code>
+</p>
+<ex4D:constant constant-id="34" name="CURLOPT_SSLENGINE" type="L" value="89" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSLENGINE (89) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,35"></a>CURLOPT_SSLENGINE_DEFAULT (90)</code>
+</p>
+<ex4D:constant constant-id="35" name="CURLOPT_SSLENGINE_DEFAULT" type="L" value="90" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_SSLENGINE_DEFAULT (90) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,10"></a>CURLOPT_DNS_CACHE_TIMEOUT (92)</code>
+</p>
+<ex4D:constant constant-id="10" name="CURLOPT_DNS_CACHE_TIMEOUT" type="L" value="92" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_DNS_CACHE_TIMEOUT (92) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,138"></a>CURLOPT_PREQUOTE (93)</code>
+</p>
+<ex4D:constant constant-id="138" name="CURLOPT_PREQUOTE" type="L" value="93" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_PREQUOTE (93) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,108"></a>CURLOPT_COOKIESESSION (96)</code>
+</p>
+<ex4D:constant constant-id="108" name="CURLOPT_COOKIESESSION" type="L" value="96" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_COOKIESESSION (96) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,11"></a>CURLOPT_BUFFERSIZE (98)</code>
+</p>
+<ex4D:constant constant-id="11" name="CURLOPT_BUFFERSIZE" type="L" value="98" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_BUFFERSIZE (98) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:1,146"></a>CURLOPT_NOSIGNAL (99)</code>
+</p>
+<ex4D:constant constant-id="146" name="CURLOPT_NOSIGNAL" type="L" value="99" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLOPT_NOSIGNAL (99) here-->
+</ex4D:constant>
+<a name="constant:2"></a>
+<h2>cURL Proxy Types</h2>
+<p>
+<code><a name="constant:2,1"></a>CURLPROXY_HTTP (0)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURLPROXY_HTTP" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLPROXY_HTTP (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:2,2"></a>CURLPROXY_HTTP_1_0 (1)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURLPROXY_HTTP_1_0" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLPROXY_HTTP_1_0 (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:2,3"></a>CURLPROXY_SOCKS4 (4)</code>
+</p>
+<ex4D:constant constant-id="3" name="CURLPROXY_SOCKS4" type="L" value="4" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLPROXY_SOCKS4 (4) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:2,4"></a>CURLPROXY_SOCKS5 (5)</code>
+</p>
+<ex4D:constant constant-id="4" name="CURLPROXY_SOCKS5" type="L" value="5" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLPROXY_SOCKS5 (5) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:2,5"></a>CURLPROXY_SOCKS4A (6)</code>
+</p>
+<ex4D:constant constant-id="5" name="CURLPROXY_SOCKS4A" type="L" value="6" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLPROXY_SOCKS4A (6) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:2,6"></a>CURLPROXY_SOCKS5_HOSTNAME (7)</code>
+</p>
+<ex4D:constant constant-id="6" name="CURLPROXY_SOCKS5_HOSTNAME" type="L" value="7" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLPROXY_SOCKS5_HOSTNAME (7) here-->
+</ex4D:constant>
+<a name="constant:3"></a>
+<h2>cURL Auth Flags</h2>
+<p>
+<code><a name="constant:3,1"></a>CURLAUTH_BASIC (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURLAUTH_BASIC" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLAUTH_BASIC (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,5"></a>CURLAUTH_DIGEST_IE (16)</code>
+</p>
+<ex4D:constant constant-id="5" name="CURLAUTH_DIGEST_IE" type="L" value="16" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLAUTH_DIGEST_IE (16) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,2"></a>CURLAUTH_DIGEST (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURLAUTH_DIGEST" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLAUTH_DIGEST (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,6"></a>CURLAUTH_NTLM_WB (32)</code>
+</p>
+<ex4D:constant constant-id="6" name="CURLAUTH_NTLM_WB" type="L" value="32" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLAUTH_NTLM_WB (32) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,3"></a>CURLAUTH_GSSNEGOTIATE (4)</code>
+</p>
+<ex4D:constant constant-id="3" name="CURLAUTH_GSSNEGOTIATE" type="L" value="4" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLAUTH_GSSNEGOTIATE (4) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:3,4"></a>CURLAUTH_NTLM (8)</code>
+</p>
+<ex4D:constant constant-id="4" name="CURLAUTH_NTLM" type="L" value="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLAUTH_NTLM (8) here-->
+</ex4D:constant>
+<a name="constant:4"></a>
+<h2>cURL SSH Auth Flags</h2>
+<p>
+<code><a name="constant:4,1"></a>CURLSSH_AUTH_PUBLICKEY (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURLSSH_AUTH_PUBLICKEY" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLSSH_AUTH_PUBLICKEY (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:4,4"></a>CURLSSH_AUTH_PASSWORD (2)</code>
+</p>
+<ex4D:constant constant-id="4" name="CURLSSH_AUTH_PASSWORD" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLSSH_AUTH_PASSWORD (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:4,3"></a>CURLSSH_AUTH_HOST (4)</code>
+</p>
+<ex4D:constant constant-id="3" name="CURLSSH_AUTH_HOST" type="L" value="4" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLSSH_AUTH_HOST (4) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:4,2"></a>CURLSSH_AUTH_KEYBOARD (8)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURLSSH_AUTH_KEYBOARD" type="L" value="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLSSH_AUTH_KEYBOARD (8) here-->
+</ex4D:constant>
+<a name="constant:5"></a>
+<h2>cURL SSL/TLS Versions</h2>
+<p>
+<code><a name="constant:5,1"></a>CURL_SSLVERSION_TLSv1 (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURL_SSLVERSION_TLSv1" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_SSLVERSION_TLSv1 (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:5,2"></a>CURL_SSLVERSION_SSLv2 (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURL_SSLVERSION_SSLv2" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_SSLVERSION_SSLv2 (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:5,3"></a>CURL_SSLVERSION_SSLv3 (3)</code>
+</p>
+<ex4D:constant constant-id="3" name="CURL_SSLVERSION_SSLv3" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_SSLVERSION_SSLv3 (3) here-->
+</ex4D:constant>
+<a name="constant:6"></a>
+<h2>cURL SSL Option Flags</h2>
+<p>
+<code><a name="constant:6,1"></a>CURLSSLOPT_ALLOW_BEAST (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURLSSLOPT_ALLOW_BEAST" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLSSLOPT_ALLOW_BEAST (1) here-->
+</ex4D:constant>
+<a name="constant:7"></a>
+<h2>cURL GSS Delegation Flags</h2>
+<p>
+<code><a name="constant:7,1"></a>CURLGSSAPI_DELEGATION_POLICY (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURLGSSAPI_DELEGATION_POLICY" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLGSSAPI_DELEGATION_POLICY (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:7,2"></a>CURLGSSAPI_DELEGATION (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURLGSSAPI_DELEGATION" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLGSSAPI_DELEGATION (2) here-->
+</ex4D:constant>
+<a name="constant:8"></a>
+<h2>cURL IP Resolve Options</h2>
+<p>
+<code><a name="constant:8,1"></a>CURL_IPRESOLVE_V4 (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURL_IPRESOLVE_V4" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_IPRESOLVE_V4 (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:8,2"></a>CURL_IPRESOLVE_V6 (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURL_IPRESOLVE_V6" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_IPRESOLVE_V6 (2) here-->
+</ex4D:constant>
+<a name="constant:9"></a>
+<h2>cURL Use SSL Options</h2>
+<p>
+<code><a name="constant:9,1"></a>CURLUSESSL_TRY (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURLUSESSL_TRY" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLUSESSL_TRY (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:9,2"></a>CURLUSESSL_CONTROL (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURLUSESSL_CONTROL" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLUSESSL_CONTROL (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:9,3"></a>CURLUSESSL_ALL (3)</code>
+</p>
+<ex4D:constant constant-id="3" name="CURLUSESSL_ALL" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLUSESSL_ALL (3) here-->
+</ex4D:constant>
+<a name="constant:10"></a>
+<h2>cURL NETRC Options</h2>
+<p>
+<code><a name="constant:10,1"></a>CURL_NETRC_OPTIONAL (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURL_NETRC_OPTIONAL" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_NETRC_OPTIONAL (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:10,2"></a>CURL_NETRC_REQUIRED (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURL_NETRC_REQUIRED" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_NETRC_REQUIRED (2) here-->
+</ex4D:constant>
+<a name="constant:11"></a>
+<h2>cURL HTTP Versions</h2>
+<p>
+<code><a name="constant:11,1"></a>CURL_HTTP_VERSION_1_0 (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURL_HTTP_VERSION_1_0" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_HTTP_VERSION_1_0 (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:11,2"></a>CURL_HTTP_VERSION_1_1 (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURL_HTTP_VERSION_1_1" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_HTTP_VERSION_1_1 (2) here-->
+</ex4D:constant>
+<a name="constant:12"></a>
+<h2>cURL CCC Options</h2>
+<p>
+<code><a name="constant:12,1"></a>CURLFTPSSL_CCC_PASSIVE (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURLFTPSSL_CCC_PASSIVE" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLFTPSSL_CCC_PASSIVE (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:12,2"></a>CURLFTPSSL_CCC_ACTIVE (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURLFTPSSL_CCC_ACTIVE" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLFTPSSL_CCC_ACTIVE (2) here-->
+</ex4D:constant>
+<a name="constant:13"></a>
+<h2>cURL FTP Options</h2>
+<p>
+<code><a name="constant:13,1"></a>CURLFTPMETHOD_MULTICWD (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURLFTPMETHOD_MULTICWD" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLFTPMETHOD_MULTICWD (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:13,2"></a>CURLFTPMETHOD_NOCWD (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURLFTPMETHOD_NOCWD" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLFTPMETHOD_NOCWD (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:13,3"></a>CURLFTPMETHOD_SINGLECWD (3)</code>
+</p>
+<ex4D:constant constant-id="3" name="CURLFTPMETHOD_SINGLECWD" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURLFTPMETHOD_SINGLECWD (3) here-->
+</ex4D:constant>
+<a name="constant:14"></a>
+<h2>cURL RTSP Options</h2>
+<p>
+<code><a name="constant:14,1"></a>CURL_RTSPREQ_OPTIONS (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="CURL_RTSPREQ_OPTIONS" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_OPTIONS (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,10"></a>CURL_RTSPREQ_RECORD (10)</code>
+</p>
+<ex4D:constant constant-id="10" name="CURL_RTSPREQ_RECORD" type="L" value="10" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_RECORD (10) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,11"></a>CURL_RTSPREQ_RECEIVE (11)</code>
+</p>
+<ex4D:constant constant-id="11" name="CURL_RTSPREQ_RECEIVE" type="L" value="11" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_RECEIVE (11) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,2"></a>CURL_RTSPREQ_DESCRIBE (2)</code>
+</p>
+<ex4D:constant constant-id="2" name="CURL_RTSPREQ_DESCRIBE" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_DESCRIBE (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,3"></a>CURL_RTSPREQ_ANNOUNCE (3)</code>
+</p>
+<ex4D:constant constant-id="3" name="CURL_RTSPREQ_ANNOUNCE" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_ANNOUNCE (3) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,4"></a>CURL_RTSPREQ_SETUP (4)</code>
+</p>
+<ex4D:constant constant-id="4" name="CURL_RTSPREQ_SETUP" type="L" value="4" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_SETUP (4) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,5"></a>CURL_RTSPREQ_PLAY (5)</code>
+</p>
+<ex4D:constant constant-id="5" name="CURL_RTSPREQ_PLAY" type="L" value="5" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_PLAY (5) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,6"></a>CURL_RTSPREQ_PAUSE (6)</code>
+</p>
+<ex4D:constant constant-id="6" name="CURL_RTSPREQ_PAUSE" type="L" value="6" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_PAUSE (6) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,7"></a>CURL_RTSPREQ_TEARDOWN (7)</code>
+</p>
+<ex4D:constant constant-id="7" name="CURL_RTSPREQ_TEARDOWN" type="L" value="7" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_TEARDOWN (7) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,8"></a>CURL_RTSPREQ_GET_PARAMETER (8)</code>
+</p>
+<ex4D:constant constant-id="8" name="CURL_RTSPREQ_GET_PARAMETER" type="L" value="8" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_GET_PARAMETER (8) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:14,9"></a>CURL_RTSPREQ_SET_PARAMETER (9)</code>
+</p>
+<ex4D:constant constant-id="9" name="CURL_RTSPREQ_SET_PARAMETER" type="L" value="9" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for CURL_RTSPREQ_SET_PARAMETER (9) here-->
+</ex4D:constant>
+<a name="constant:15"></a>
+<h2>Crypto Output Format</h2>
+<p>
+<code><a name="constant:15,1"></a>Crypto HEX (0)</code>
+</p>
+<ex4D:constant constant-id="1" name="Crypto HEX" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for Crypto HEX (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:15,2"></a>Crypto BASE64 (1)</code>
+</p>
+<ex4D:constant constant-id="2" name="Crypto BASE64" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for Crypto BASE64 (1) here-->
+</ex4D:constant>
+<a name="constant:16"></a>
+<h2>JSON Types</h2>
+<p>
+<code><a name="constant:16,1"></a>JSON_NULL (0)</code>
+</p>
+<ex4D:constant constant-id="1" name="JSON_NULL" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_NULL (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:16,2"></a>JSON_STRING (1)</code>
+</p>
+<ex4D:constant constant-id="2" name="JSON_STRING" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_STRING (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:16,3"></a>JSON_NUMBER (2)</code>
+</p>
+<ex4D:constant constant-id="3" name="JSON_NUMBER" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_NUMBER (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:16,4"></a>JSON_BOOL (3)</code>
+</p>
+<ex4D:constant constant-id="4" name="JSON_BOOL" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_BOOL (3) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:16,5"></a>JSON_ARRAY (4)</code>
+</p>
+<ex4D:constant constant-id="5" name="JSON_ARRAY" type="L" value="4" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_ARRAY (4) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:16,6"></a>JSON_NODE (5)</code>
+</p>
+<ex4D:constant constant-id="6" name="JSON_NODE" type="L" value="5" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_NODE (5) here-->
+</ex4D:constant>
+<a name="constant:17"></a>
+<h2>JSON Get Option</h2>
+<p>
+<code><a name="constant:17,2"></a>JSON_CASE_SENSITIVE (0)</code>
+</p>
+<ex4D:constant constant-id="2" name="JSON_CASE_SENSITIVE" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_CASE_SENSITIVE (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:17,1"></a>JSON_CASE_INSENSITIVE (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="JSON_CASE_INSENSITIVE" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_CASE_INSENSITIVE (1) here-->
+</ex4D:constant>
+<a name="constant:18"></a>
+<h2>JSON Export Option</h2>
+<p>
+<code><a name="constant:18,1"></a>JSON_WITH_WHITE_SPACE (0)</code>
+</p>
+<ex4D:constant constant-id="1" name="JSON_WITH_WHITE_SPACE" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_WITH_WHITE_SPACE (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:18,2"></a>JSON_WITHOUT_WHITE_SPACE (1)</code>
+</p>
+<ex4D:constant constant-id="2" name="JSON_WITHOUT_WHITE_SPACE" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON_WITHOUT_WHITE_SPACE (1) here-->
+</ex4D:constant>
+<a name="constant:19"></a>
+<h2>Known Folder Path</h2>
+<p>
+<code><a name="constant:19,1"></a>WIN My Documents (0)</code>
+</p>
+<ex4D:constant constant-id="1" name="WIN My Documents" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for WIN My Documents (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:19,5"></a>MAC Documents (0)</code>
+</p>
+<ex4D:constant constant-id="5" name="MAC Documents" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for MAC Documents (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:19,2"></a>WIN App Data Local (1)</code>
+</p>
+<ex4D:constant constant-id="2" name="WIN App Data Local" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for WIN App Data Local (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:19,6"></a>MAC App Support User (1)</code>
+</p>
+<ex4D:constant constant-id="6" name="MAC App Support User" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for MAC App Support User (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:19,3"></a>WIN App Data Common (2)</code>
+</p>
+<ex4D:constant constant-id="3" name="WIN App Data Common" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for WIN App Data Common (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:19,7"></a>MAC App Support Local (2)</code>
+</p>
+<ex4D:constant constant-id="7" name="MAC App Support Local" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for MAC App Support Local (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:19,4"></a>WIN App Data Roaming (3)</code>
+</p>
+<ex4D:constant constant-id="4" name="WIN App Data Roaming" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for WIN App Data Roaming (3) here-->
+</ex4D:constant>
+<a name="constant:20"></a>
+<h2>Normalization</h2>
+<p>
+<code><a name="constant:20,2"></a>ICU Normalize NFC (0)</code>
+</p>
+<ex4D:constant constant-id="2" name="ICU Normalize NFC" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for ICU Normalize NFC (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:20,3"></a>ICU Normalize NFD (1)</code>
+</p>
+<ex4D:constant constant-id="3" name="ICU Normalize NFD" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for ICU Normalize NFD (1) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:20,4"></a>ICU Normalize NFKC (2)</code>
+</p>
+<ex4D:constant constant-id="4" name="ICU Normalize NFKC" type="L" value="2" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for ICU Normalize NFKC (2) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:20,5"></a>ICU Normalize NFKD (3)</code>
+</p>
+<ex4D:constant constant-id="5" name="ICU Normalize NFKD" type="L" value="3" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for ICU Normalize NFKD (3) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:20,1"></a>ICU Normalize NFKC_CF (4)</code>
+</p>
+<ex4D:constant constant-id="1" name="ICU Normalize NFKC_CF" type="L" value="4" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for ICU Normalize NFKC_CF (4) here-->
+</ex4D:constant>
+<a name="constant:21"></a>
+<h2>Transformation</h2>
+<p>
+<code><a name="constant:21,2"></a>ICU Transform Forward (0)</code>
+</p>
+<ex4D:constant constant-id="2" name="ICU Transform Forward" type="L" value="0" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for ICU Transform Forward (0) here-->
+</ex4D:constant>
+<p>
+<code><a name="constant:21,1"></a>ICU Transform Reverse (1)</code>
+</p>
+<ex4D:constant constant-id="1" name="ICU Transform Reverse" type="L" value="1" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for ICU Transform Reverse (1) here-->
+</ex4D:constant>
+<p class="footer">
+<span class="title">Documentation Update: </span>2012-07-03T07:01:0009:00</p>
+</body>
+</html>
