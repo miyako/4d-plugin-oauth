@@ -387,7 +387,147 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
                         //                    case CURLOPT_RESOLVE:						
                         //                    case CURLOPT_HTTP200ALIASES:
                         //						break;
-                        
+					case 36://CURLOPT_CUSTOMREQUEST:
+						curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, value.c_str());	
+						break; 
+					case 102://CURLOPT_ACCEPT_ENCODING:
+						curl_easy_setopt(curl, CURLOPT_ACCEPT_ENCODING, value.c_str());	
+						break;
+					case 118://CURLOPT_NETRC_FILE:
+						curl_easy_setopt(curl, CURLOPT_NETRC_FILE, value.c_str());	
+						break; 
+					case 135://CURLOPT_COOKIELIST:
+						curl_easy_setopt(curl, CURLOPT_COOKIELIST, value.c_str());	
+						break; 
+					case 147://CURLOPT_FTP_ALTERNATIVE_TO_USE:
+						curl_easy_setopt(curl, CURLOPT_FTP_ALTERNATIVE_TO_USER, value.c_str());	
+						break; 
+					case 152://CURLOPT_SSH_PUBLIC_KEYFILE:
+						curl_easy_setopt(curl, CURLOPT_SSH_PUBLIC_KEYFILE, value.c_str());	
+						break;
+					case 153://CURLOPT_SSH_PRIVATE_KEYFILE:
+						curl_easy_setopt(curl, CURLOPT_SSH_PRIVATE_KEYFILE, value.c_str());	
+						break; 
+					case 16://CURLOPT_REFERER:
+						curl_easy_setopt(curl, CURLOPT_REFERER, value.c_str());	
+						break;   
+					case 162://CURLOPT_SSH_HOST_PUBLIC_KEY_MD5:
+						curl_easy_setopt(curl, CURLOPT_SSH_HOST_PUBLIC_KEY_MD5, value.c_str());	
+						break; 
+					case 169://CURLOPT_CRLFILE:
+						curl_easy_setopt(curl, CURLOPT_CRLFILE, value.c_str());	
+						break; 
+					case 17://CURLOPT_FTPPORT:
+						curl_easy_setopt(curl, CURLOPT_FTPPORT, value.c_str());	
+						break;  
+					case 170://CURLOPT_ISSUERCERT:
+						curl_easy_setopt(curl, CURLOPT_ISSUERCERT, value.c_str());	
+						break;                          
+					case 173://CURLOPT_USERNAME:
+						curl_easy_setopt(curl, CURLOPT_USERNAME, value.c_str());	
+						break;
+					case 174://CURLOPT_PASSWORD:
+						curl_easy_setopt(curl, CURLOPT_PASSWORD, value.c_str());	
+						break;  
+					case 175://CURLOPT_PROXYUSERNAME:
+						curl_easy_setopt(curl, CURLOPT_PROXYUSERNAME, value.c_str());	
+						break;  
+					case 176://CURLOPT_PROXYPASSWORD:
+						curl_easy_setopt(curl, CURLOPT_PROXYPASSWORD, value.c_str());	
+						break;  
+					case 177://CURLOPT_NOPROXY:
+						curl_easy_setopt(curl, CURLOPT_NOPROXY, value.c_str());	
+						break;  
+					case 179://CURLOPT_SOCKS5_GSSAPI_SERVICE:
+						curl_easy_setopt(curl, CURLOPT_SOCKS5_GSSAPI_SERVICE, value.c_str());	
+						break;  
+					case 18://CURLOPT_USERAGENT:
+						curl_easy_setopt(curl, CURLOPT_USERAGENT, value.c_str());	
+						break; 
+					case 183://CURLOPT_SSH_KNOWNHOSTS:
+						curl_easy_setopt(curl, CURLOPT_SSH_KNOWNHOSTS, value.c_str());	
+						break;   
+					case 186://CURLOPT_MAIL_FROM:
+						curl_easy_setopt(curl, CURLOPT_MAIL_FROM, value.c_str());	
+						break;  
+					case 190://CURLOPT_RTSP_SESSION_ID:
+						curl_easy_setopt(curl, CURLOPT_RTSP_SESSION_ID, value.c_str());	
+						break;  
+					case 191://CURLOPT_RTSP_STREAM_URI:
+						curl_easy_setopt(curl, CURLOPT_RTSP_STREAM_URI, value.c_str());	
+						break; 
+					case 192://CURLOPT_RTSP_TRANSPORT:
+						curl_easy_setopt(curl, CURLOPT_RTSP_TRANSPORT, value.c_str());	
+						break;
+					case 197://CURLOPT_WILDCARDMATCH:
+						curl_easy_setopt(curl, CURLOPT_WILDCARDMATCH, value.c_str());	
+						break;  
+					case 204://CURLOPT_TLSAUTH_USERNAME:
+						curl_easy_setopt(curl, CURLOPT_TLSAUTH_USERNAME, value.c_str());	
+						break;  
+					case 205://CURLOPT_TLSAUTH_PASSWORD:
+						curl_easy_setopt(curl, CURLOPT_TLSAUTH_PASSWORD, value.c_str());	
+						break; 
+					case 207://CURLOPT_TRANSFER_ENCODING:
+						curl_easy_setopt(curl, CURLOPT_TRANSFER_ENCODING, value.c_str());	
+						break;  
+					case 217://CURLOPT_MAIL_AUTH:
+						curl_easy_setopt(curl, CURLOPT_MAIL_AUTH, value.c_str());	
+						break;  
+					case 25://CURLOPT_SSLCERT:
+						curl_easy_setopt(curl, CURLOPT_SSLCERT, value.c_str());	
+						break; 
+					case 26://CURLOPT_KEYPASSWD:
+						curl_easy_setopt(curl, CURLOPT_KEYPASSWD, value.c_str());	
+						break; 
+					case 31://CURLOPT_COOKIEFILE:
+						curl_easy_setopt(curl, CURLOPT_COOKIEFILE, value.c_str());	
+						break; 
+					case 4://CURLOPT_PROXY:
+						curl_easy_setopt(curl, CURLOPT_PROXY, value.c_str());	
+						break;    
+					case 5://CURLOPT_USERPWD:
+						curl_easy_setopt(curl, CURLOPT_USERPWD, value.c_str());	
+						break;  
+					case 6://CURLOPT_PROXYUSERPWD:
+						curl_easy_setopt(curl, CURLOPT_PROXYUSERPWD, value.c_str());	
+						break;   
+					case 62://CURLOPT_INTERFACE:
+						curl_easy_setopt(curl, CURLOPT_INTERFACE, value.c_str());	
+						break; 
+					case 63://CURLOPT_KRBLEVEL:
+						curl_easy_setopt(curl, CURLOPT_KRBLEVEL, value.c_str());	
+						break; 
+					case 65://CURLOPT_CAINFO:
+						curl_easy_setopt(curl, CURLOPT_CAINFO, value.c_str());	
+						break;
+					case 7://CURLOPT_RANGE:
+						curl_easy_setopt(curl, CURLOPT_RANGE, value.c_str());	
+						break;  
+					case 76://CURLOPT_RANDOM_FILE:
+						curl_easy_setopt(curl, CURLOPT_RANDOM_FILE, value.c_str());	
+						break;  
+					case 77://CURLOPT_EGDSOCKET:
+						curl_easy_setopt(curl, CURLOPT_EGDSOCKET, value.c_str());	
+						break;   
+					case 82://CURLOPT_COOKIEJAR:
+						curl_easy_setopt(curl, CURLOPT_COOKIEJAR, value.c_str());	
+						break;
+					case 83://CURLOPT_SSL_CIPHER_LIST:
+						curl_easy_setopt(curl, CURLOPT_SSL_CIPHER_LIST, value.c_str());	
+						break; 
+					case 86://CURLOPT_SSLCERTTYPE:
+						curl_easy_setopt(curl, CURLOPT_SSLCERTTYPE, value.c_str());	
+						break;   
+					case 87://CURLOPT_SSLKEY:
+						curl_easy_setopt(curl, CURLOPT_SSLKEY, value.c_str());	
+						break; 
+					case 88://CURLOPT_SSLKEYTYPE:
+						curl_easy_setopt(curl, CURLOPT_SSLKEYTYPE, value.c_str());	
+						break; 
+					case 89://CURLOPT_SSLENGINE:
+						curl_easy_setopt(curl, CURLOPT_SSLENGINE, value.c_str());	
+						break;                         
 					default:
 						curl_easy_setopt(curl, option, value.c_str());							
 						break;

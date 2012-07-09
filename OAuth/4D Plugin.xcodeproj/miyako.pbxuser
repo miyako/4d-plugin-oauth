@@ -52,8 +52,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 362991045;
-			PBXWorkspaceStateSaveDate = 362991045;
+			PBXPerProjectTemplateStateSaveDate = 363488738;
+			PBXWorkspaceStateSaveDate = 363488738;
 		};
 		perUserProjectItems = {
 			D16CE2C215A2C94D00F06EE6 /* PBXTextBookmark */ = D16CE2C215A2C94D00F06EE6 /* PBXTextBookmark */;
@@ -68,8 +68,6 @@
 			D16CE35115A2CBDC00F06EE6 /* PBXTextBookmark */ = D16CE35115A2CBDC00F06EE6 /* PBXTextBookmark */;
 			D16CE3AE15A2CE6300F06EE6 /* PBXTextBookmark */ = D16CE3AE15A2CE6300F06EE6 /* PBXTextBookmark */;
 			D16CE3B615A2D01F00F06EE6 /* PBXTextBookmark */ = D16CE3B615A2D01F00F06EE6 /* PBXTextBookmark */;
-			D16CE3B715A2D01F00F06EE6 /* PBXTextBookmark */ = D16CE3B715A2D01F00F06EE6 /* PBXTextBookmark */;
-			D16CE3B915A2D01F00F06EE6 /* PBXTextBookmark */ = D16CE3B915A2D01F00F06EE6 /* PBXTextBookmark */;
 		};
 		sourceControlManager = D16CE19115A2C0AE00F06EE6 /* Source Control */;
 		userBuildSettings = {
@@ -331,40 +329,5 @@
 		rType = 0;
 		vrLen = 520;
 		vrLoc = 14989;
-	};
-	D16CE3B715A2D01F00F06EE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D16CE3B815A2D01F00F06EE6 /* documentation.xml */;
-		rLen = 0;
-		rLoc = 9223372036854775980;
-		rType = 0;
-	};
-	D16CE3B815A2D01F00F06EE6 /* documentation.xml */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = text.xml;
-		name = documentation.xml;
-		path = /Users/miyako/Desktop/OAuth/sample.4dbase/Plugins/OAuth.bundle/Contents/Resources/documentation.xml;
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {796, 31440}}";
-			sepNavSelRange = "{428, 0}";
-			sepNavVisRange = "{0, 803}";
-		};
-	};
-	D16CE3B915A2D01F00F06EE6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D16CE3BA15A2D01F00F06EE6 /* documentation.xml */;
-		name = "documentation.xml: 11";
-		rLen = 0;
-		rLoc = 428;
-		rType = 0;
-		vrLen = 803;
-		vrLoc = 0;
-	};
-	D16CE3BA15A2D01F00F06EE6 /* documentation.xml */ = {
-		isa = PBXFileReference;
-		name = documentation.xml;
-		path = /Users/miyako/Desktop/OAuth/sample.4dbase/Plugins/OAuth.bundle/Contents/Resources/documentation.xml;
-		sourceTree = "<absolute>";
 	};
 }

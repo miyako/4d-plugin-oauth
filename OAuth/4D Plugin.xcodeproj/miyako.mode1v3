@@ -232,6 +232,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -307,8 +309,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -323,10 +323,6 @@
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>documentation.xml</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>D16CE3B915A2D01F00F06EE6</string>
 										<key>history</key>
 										<array>
 											<string>D16CE2C215A2C94D00F06EE6</string>
@@ -341,7 +337,6 @@
 											<string>D16CE35115A2CBDC00F06EE6</string>
 											<string>D16CE3AE15A2CE6300F06EE6</string>
 											<string>D16CE3B615A2D01F00F06EE6</string>
-											<string>D16CE3B715A2D01F00F06EE6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -353,14 +348,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {750, 323}}</string>
+								<string>{{0, 0}, {750, 307}}</string>
 								<key>RubberWindowFrame</key>
 								<string>179 251 958 558 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>323pt</string>
+							<string>307pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -373,14 +368,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 328}, {750, 189}}</string>
+								<string>{{0, 312}, {750, 205}}</string>
 								<key>RubberWindowFrame</key>
 								<string>179 251 958 558 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>189pt</string>
+							<string>205pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -399,9 +394,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D16CE3A315A2CDD000F06EE6</string>
+				<string>D12BC4FB15AA65E500C74C89</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D16CE3A415A2CDD000F06EE6</string>
+				<string>D12BC4FC15AA65E500C74C89</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -540,7 +535,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>D16CE1A115A2C11D00F06EE6</string>
-		<string>/Users/miyako/Desktop/OAuth/4D Plugin.xcodeproj</string>
+		<string>/Volumes/Support/一時的/OAuth/4D Plugin.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>179 251 958 558 0 0 1440 878 </string>
@@ -564,7 +559,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>functions_misc.cpp</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -581,8 +576,6 @@
 							<string>110pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -622,7 +615,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D16CE1A115A2C11D00F06EE6</string>
-				<string>D16CE3A515A2CDD000F06EE6</string>
+				<string>D12BC4FD15AA65E500C74C89</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
