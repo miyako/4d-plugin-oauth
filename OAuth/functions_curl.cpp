@@ -371,12 +371,12 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 							
 							n = value.find_first_of((const uint8_t *)",", p);
 							if(n == CUTF8String::npos) n = value.length();
-							CUTF8String v = value.substr(p, n - i);
+							CUTF8String v = value.substr(p, n - p);
 							values_CURLOPT_MAIL_RCPT = curl_slist_append(values_CURLOPT_MAIL_RCPT, (const char *)v.c_str());
                             
 						}	
 						
-						if(values_CURLOPT_MAIL_RCPT) curl_easy_setopt(curl, option, values_CURLOPT_MAIL_RCPT);
+						if(values_CURLOPT_MAIL_RCPT) curl_easy_setopt(curl, CURLOPT_MAIL_RCPT, values_CURLOPT_MAIL_RCPT);
                         
 						break;	
                         
@@ -549,7 +549,7 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 		
 		curl_easy_cleanup(curl);		
         
-	}	
+	}
 	
 	if(error != CURLE_OK) returnValue.setIntValue(error);	
 	
