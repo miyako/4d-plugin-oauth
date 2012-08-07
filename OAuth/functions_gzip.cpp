@@ -156,21 +156,27 @@ void Zip(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_TEXT Param1;
 	C_TEXT Param2;
+    C_TEXT Param3;
 	C_LONGINT returnValue;
 	
 	Param1.fromParamAtIndex(pParams, 1);
 	Param2.fromParamAtIndex(pParams, 2);
-	
+	Param3.fromParamAtIndex(pParams, 3);
+    
+    CUTF8String password;
+	Param3.copyUTF8String(&password);
+    
 	zstring srcPath;
 	zstring dstPath;
-	
+    
 	_copyPath(&Param1, &srcPath);
 	_copyPath(&Param2, &dstPath);
 	
 	zipFile hZip = zipOpen64(dstPath.c_str(), APPEND_STATUS_CREATE);
+	unsigned long CRC;
 	
 	if(hZip){
-		
+        
 		returnValue.setIntValue(1);
 		
 		zstrings subpaths;
@@ -178,13 +184,13 @@ void Zip(sLONG_PTR *pResult, PackagePtr pParams)
 		_getSubpaths(srcPath, subpaths);
 		
 		zip_fileinfo zi;
-		
+        
 		time_t currentTime;
 		time(&currentTime);
 		
-		struct tm *tm;	
+		struct tm *tm;
 		tm=localtime(&currentTime);
-		
+        
 		zi.tmz_date.tm_sec=tm->tm_sec;
 		zi.tmz_date.tm_min=tm->tm_min;
 		zi.tmz_date.tm_hour=tm->tm_hour;
@@ -192,7 +198,7 @@ void Zip(sLONG_PTR *pResult, PackagePtr pParams)
 		zi.tmz_date.tm_mon=tm->tm_mon;
 		zi.tmz_date.tm_year=tm->tm_year;
 		zi.external_fa = 0;
-		zi.internal_fa = 0;		
+		zi.internal_fa = 0;
 		zi.dosDate = 0;
 		
 		zi.internal_fa = zi.external_fa = 0;
@@ -201,11 +207,11 @@ void Zip(sLONG_PTR *pResult, PackagePtr pParams)
 			
 #if VERSIONWIN
 			zstring relativePath = subpaths.at(i);
-			zstring escapePath = relativePath;			
+			zstring escapePath = relativePath;
 			for (unsigned int j = 0; j < escapePath.size(); ++j)
 				if (escapePath.at(j) == folder_separator)
 					escapePath.at(j) = L'/';
-			
+            
 			C_TEXT t;
 			t.setUTF16String((const PA_Unichar *)escapePath.c_str(), escapePath.size());
 			CUTF8String u;
@@ -213,53 +219,93 @@ void Zip(sLONG_PTR *pResult, PackagePtr pParams)
 			
 			std::string fileName = std::string((const char *)u.c_str());
 #else
-			zstring fileName = subpaths.at(i);		
-#endif				
-			
-			if(zipOpenNewFileInZip64(hZip,
-									 fileName.c_str(),
-									 &zi,
-									 NULL, 0,
-									 NULL, 0,
-									 NULL,
-									 Z_DEFLATED,
-									 Z_DEFAULT_COMPRESSION,
-									 0) != UNZ_OK){
-				returnValue.setIntValue(0);
-				break;			
-			}
-			
+			zstring fileName = subpaths.at(i);
+#endif
+            
 			zstring fullPath;
 			
 			if(subpaths.size() == 1){
 				
-				fullPath = srcPath;				
-				
+				fullPath = srcPath;
+                
 			}else{
 				
-#if VERSIONMAC						
-				fullPath = srcPath + folder_separator + fileName;
+#if VERSIONMAC
+                fullPath = srcPath + folder_separator + fileName;
 #else
-				fullPath = srcPath + folder_separator + relativePath;					
-#endif	
-			}			
-			
-#if VERSIONMAC			
+                fullPath = srcPath + folder_separator + relativePath;
+#endif
+			}
+            
+#if VERSIONMAC
 			NSString *path = [[NSString alloc]initWithUTF8String:fullPath.c_str()];
 			fullPath = [path fileSystemRepresentation];
 			[path release];
 #endif
-			
+            
+            if(password.length()){
+                
+				CRC = crc32(0L, Z_NULL, 0);
+				
+                std::ifstream ifs_crc(fullPath.c_str(), std::ios::in|std::ios::binary);
+                
+                if(ifs_crc.is_open()){
+                    
+                    std::vector<uint8_t> buf(BUFFER_SIZE);
+                    
+                    while(ifs_crc.good()){
+                        
+                        ifs_crc.read((char *)&buf[0], BUFFER_SIZE);
+                        
+                        CRC = crc32(CRC, (const Bytef *)&buf[0], ifs_crc.gcount());
+                        
+                    }
+                    
+                    ifs_crc.close();
+                    
+                }
+                
+                if(zipOpenNewFileInZip3_64(hZip,
+                                           fileName.c_str(),
+                                           &zi,
+                                           NULL, 0,
+                                           NULL, 0,
+                                           NULL,
+                                           Z_DEFLATED,
+                                           Z_DEFAULT_COMPRESSION,
+                                           0, 15, 8, Z_DEFAULT_STRATEGY,
+                                           (const char *)password.c_str(), CRC, 1) != UNZ_OK){
+					returnValue.setIntValue(0);
+					break;
+                }
+                
+            }else{
+                
+                if(zipOpenNewFileInZip64(hZip,
+                                         fileName.c_str(),
+                                         &zi,
+                                         NULL, 0,
+                                         NULL, 0,
+                                         NULL,
+                                         Z_DEFLATED,
+                                         Z_DEFAULT_COMPRESSION,
+                                         0) != UNZ_OK){
+					returnValue.setIntValue(0);
+					break;
+                }
+                
+            }
+            
 			std::ifstream ifs(fullPath.c_str(), std::ios::in|std::ios::binary);
 			
 			if(ifs.is_open()){
-				
-				std::vector<uint8_t> buf(BUFFER_SIZE);	
+                
+				std::vector<uint8_t> buf(BUFFER_SIZE);
 				
 				while(ifs.good()){
 					
 					ifs.read((char *)&buf[0], BUFFER_SIZE);
-					zipWriteInFileInZip(hZip, (char *)&buf[0], ifs.gcount());				
+					zipWriteInFileInZip(hZip, (char *)&buf[0], ifs.gcount());
 					
 				}
 				
@@ -267,12 +313,12 @@ void Zip(sLONG_PTR *pResult, PackagePtr pParams)
 				
 			}
 			
-			zipCloseFileInZip(hZip);			
+			zipCloseFileInZip(hZip);
 			
 		}
-		
-		zipClose(hZip, NULL);	
-		
+        
+		zipClose(hZip, NULL);
+        
 	}
 	
 	returnValue.setReturn(pResult);
@@ -282,10 +328,15 @@ void Unzip(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_TEXT Param1;
 	C_TEXT Param2;
+	C_TEXT Param3;
 	C_LONGINT returnValue;
 	
 	Param1.fromParamAtIndex(pParams, 1);
 	Param2.fromParamAtIndex(pParams, 2);
+	Param3.fromParamAtIndex(pParams, 3);
+	
+    CUTF8String password;
+	Param3.copyUTF8String(&password);
 	
 	zstring srcPath;
 	zstring dstPath;
@@ -293,7 +344,7 @@ void Unzip(sLONG_PTR *pResult, PackagePtr pParams)
 	_copyPath(&Param1, &srcPath);
 	_copyPath(&Param2, &dstPath);
 	
-	unzFile hUnzip = unzOpen64(srcPath.c_str());	
+	unzFile hUnzip = unzOpen64(srcPath.c_str());
 	
 	if (hUnzip){
 		
@@ -309,8 +360,8 @@ void Unzip(sLONG_PTR *pResult, PackagePtr pParams)
 		do {
 			
 			if (unzGetCurrentFileInfo64(hUnzip, &fileInfo, (char *)&szConFilename[0], PATH_MAX, NULL, 0, NULL, 0) != UNZ_OK){
-				returnValue.setIntValue(0);
-				break;
+                returnValue.setIntValue(0);
+                break;
 			}
 			
 #if VERSIONWIN
@@ -325,27 +376,37 @@ void Unzip(sLONG_PTR *pResult, PackagePtr pParams)
 			t.setUTF8String((const uint8_t *)path.c_str(), path.size());
 			relativePathName = zstring((const wchar_t *)t.getUTF16StringPtr());
 #else
-			relativePathName = std::string((const char *)&szConFilename[0]);			
-#endif				
+			relativePathName = std::string((const char *)&szConFilename[0]);
+#endif
 			
 			absolutePathName = dstPath + folder_separator + relativePathName;
 			
 			_createParentFolder(&absolutePathName);
 			
 			if(relativePathName.size() > 1){
-				
+                
 				if(relativePathName.at(relativePathName.size() - 1) == folder_separator)
 					_createFolder(absolutePathName);
-				
-				if(unzOpenCurrentFile(hUnzip) != UNZ_OK){
-					returnValue.setIntValue(0);
-					break;				
-				}			
-				
+                
+				if(password.length()){
+                    
+					if(unzOpenCurrentFilePassword(hUnzip, (const char *)password.c_str()) != UNZ_OK){
+						returnValue.setIntValue(0);
+						break;
+					}
+					
+				}else{
+                    
+					if(unzOpenCurrentFile(hUnzip) != UNZ_OK){
+						returnValue.setIntValue(0);
+						break;
+					}
+				}
+                
 				std::ofstream ofs(absolutePathName.c_str(), std::ios::out|std::ios::binary);
 				
 				if(ofs.is_open()){
-					
+                    
 					std::vector<uint8_t> buf(BUFFER_SIZE);
 					std::streamsize size;
 					
@@ -355,9 +416,9 @@ void Unzip(sLONG_PTR *pResult, PackagePtr pParams)
 					ofs.close();
 					
 				}
-				
+                
 			}
-			
+            
 			unzCloseCurrentFile(hUnzip);
 			
 		} while (unzGoToNextFile(hUnzip) != UNZ_END_OF_LIST_OF_FILE);
@@ -367,4 +428,3 @@ void Unzip(sLONG_PTR *pResult, PackagePtr pParams)
 	
 	returnValue.setReturn(pResult);
 }
-
