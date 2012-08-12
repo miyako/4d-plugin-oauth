@@ -325,6 +325,20 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
                                                                       (const char *)(CUTF8String((const uint8_t *)"Authorization: ") + value).c_str());
                         
 						break;
+						
+					case 8://CURLOPT_HTTP_CONTENT_TYPE
+						
+						values_CURLOPT_HTTPHEADER = curl_slist_append(values_CURLOPT_HTTPHEADER,
+                                                                      (const char *)(CUTF8String((const uint8_t *)"Content-Type: ") + value).c_str());
+                        
+						break;
+						
+					case 9://CURLOPT_HTTP_ACCEPT
+						
+						values_CURLOPT_HTTPHEADER = curl_slist_append(values_CURLOPT_HTTPHEADER,
+                                                                      (const char *)(CUTF8String((const uint8_t *)"Accept: ") + value).c_str());
+                        
+						break;
                         
 						//integer options
 					case 42://CURLOPT_HEADER:
