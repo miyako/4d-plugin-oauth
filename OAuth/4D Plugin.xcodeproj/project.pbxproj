@@ -24,12 +24,8 @@
 		D10DD2EC135FAB2F00319781 /* C_DATE.h in Headers */ = {isa = PBXBuildFile; fileRef = D10DD2EA135FAB2F00319781 /* C_DATE.h */; };
 		D120937F13534DCC00A72CAA /* 4DPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = D120937E13534DCC00A72CAA /* 4DPlugin.h */; };
 		D1261F8F15D5FDCE001C0DA0 /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1261F8815D5FDCE001C0DA0 /* libcrypto.1.0.0.dylib */; };
-		D1261F9015D5FDCE001C0DA0 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1261F8915D5FDCE001C0DA0 /* libcurl.4.dylib */; };
-		D1261F9115D5FDCE001C0DA0 /* libidn.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1261F8A15D5FDCE001C0DA0 /* libidn.11.dylib */; };
 		D1261F9215D5FDCE001C0DA0 /* libjson.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1261F8B15D5FDCE001C0DA0 /* libjson.dylib */; };
-		D1261F9315D5FDCE001C0DA0 /* libssh2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1261F8C15D5FDCE001C0DA0 /* libssh2.1.dylib */; };
 		D1261F9415D5FDCE001C0DA0 /* libssl.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1261F8D15D5FDCE001C0DA0 /* libssl.1.0.0.dylib */; };
-		D1261F9515D5FDCE001C0DA0 /* libz.1.2.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1261F8E15D5FDCE001C0DA0 /* libz.1.2.6.dylib */; };
 		D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D130064E12F02D9700702C0E /* Cocoa.framework */; };
 		D1392DD513582164004911A5 /* C_PICTURE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1392DD313582164004911A5 /* C_PICTURE.cpp */; };
 		D1392DD613582164004911A5 /* C_PICTURE.h in Headers */ = {isa = PBXBuildFile; fileRef = D1392DD413582164004911A5 /* C_PICTURE.h */; };
@@ -37,6 +33,10 @@
 		D1392DDA13582171004911A5 /* C_BLOB.h in Headers */ = {isa = PBXBuildFile; fileRef = D1392DD813582171004911A5 /* C_BLOB.h */; };
 		D13E88A013543F3800C1F956 /* ARRAY_REAL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13E889E13543F3800C1F956 /* ARRAY_REAL.cpp */; };
 		D13E88A113543F3800C1F956 /* ARRAY_REAL.h in Headers */ = {isa = PBXBuildFile; fileRef = D13E889F13543F3800C1F956 /* ARRAY_REAL.h */; };
+		D154C4C7162C810F00E6FD6C /* libcurl.7.28.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D154C4C6162C810F00E6FD6C /* libcurl.7.28.0.dylib */; };
+		D154C4D2162C811F00E6FD6C /* libssh2.1.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D154C4D1162C811F00E6FD6C /* libssh2.1.4.2.dylib */; };
+		D154C4D4162C812500E6FD6C /* libz.1.2.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D154C4D3162C812500E6FD6C /* libz.1.2.7.dylib */; };
+		D154C4F0162C836700E6FD6C /* libidn.1.24.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D154C4EF162C836700E6FD6C /* libidn.1.24.dylib */; };
 		D16AC3AA147CB499000AA750 /* ARRAY_BOOLEAN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16AC3A8147CB499000AA750 /* ARRAY_BOOLEAN.cpp */; };
 		D16AC3AB147CB499000AA750 /* ARRAY_BOOLEAN.h in Headers */ = {isa = PBXBuildFile; fileRef = D16AC3A9147CB499000AA750 /* ARRAY_BOOLEAN.h */; };
 		D16CE1B815A2C18800F06EE6 /* functions_curl.h in Headers */ = {isa = PBXBuildFile; fileRef = D16CE1B615A2C18800F06EE6 /* functions_curl.h */; };
@@ -96,12 +96,8 @@
 		D10DD2EA135FAB2F00319781 /* C_DATE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_DATE.h; path = Classes/C_DATE.h; sourceTree = "<group>"; };
 		D120937E13534DCC00A72CAA /* 4DPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 4DPlugin.h; sourceTree = "<group>"; };
 		D1261F8815D5FDCE001C0DA0 /* libcrypto.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.0.0.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libcrypto.1.0.0.dylib; sourceTree = "<group>"; };
-		D1261F8915D5FDCE001C0DA0 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libcurl.4.dylib; sourceTree = "<group>"; };
-		D1261F8A15D5FDCE001C0DA0 /* libidn.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libidn.11.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libidn.11.dylib; sourceTree = "<group>"; };
 		D1261F8B15D5FDCE001C0DA0 /* libjson.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjson.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libjson.dylib; sourceTree = "<group>"; };
-		D1261F8C15D5FDCE001C0DA0 /* libssh2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssh2.1.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libssh2.1.dylib; sourceTree = "<group>"; };
 		D1261F8D15D5FDCE001C0DA0 /* libssl.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.1.0.0.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libssl.1.0.0.dylib; sourceTree = "<group>"; };
-		D1261F8E15D5FDCE001C0DA0 /* libz.1.2.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.6.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libz.1.2.6.dylib; sourceTree = "<group>"; };
 		D130064E12F02D9700702C0E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		D1392DD313582164004911A5 /* C_PICTURE.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_PICTURE.cpp; path = Classes/C_PICTURE.cpp; sourceTree = "<group>"; };
 		D1392DD413582164004911A5 /* C_PICTURE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_PICTURE.h; path = Classes/C_PICTURE.h; sourceTree = "<group>"; };
@@ -109,6 +105,10 @@
 		D1392DD813582171004911A5 /* C_BLOB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_BLOB.h; path = Classes/C_BLOB.h; sourceTree = "<group>"; };
 		D13E889E13543F3800C1F956 /* ARRAY_REAL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_REAL.cpp; path = Classes/ARRAY_REAL.cpp; sourceTree = "<group>"; };
 		D13E889F13543F3800C1F956 /* ARRAY_REAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_REAL.h; path = Classes/ARRAY_REAL.h; sourceTree = "<group>"; };
+		D154C4C6162C810F00E6FD6C /* libcurl.7.28.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.7.28.0.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libcurl.7.28.0.dylib; sourceTree = "<group>"; };
+		D154C4D1162C811F00E6FD6C /* libssh2.1.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssh2.1.4.2.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libssh2.1.4.2.dylib; sourceTree = "<group>"; };
+		D154C4D3162C812500E6FD6C /* libz.1.2.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.7.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libz.1.2.7.dylib; sourceTree = "<group>"; };
+		D154C4EF162C836700E6FD6C /* libidn.1.24.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libidn.1.24.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libidn.1.24.dylib; sourceTree = "<group>"; };
 		D16AC3A8147CB499000AA750 /* ARRAY_BOOLEAN.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_BOOLEAN.cpp; path = Classes/ARRAY_BOOLEAN.cpp; sourceTree = "<group>"; };
 		D16AC3A9147CB499000AA750 /* ARRAY_BOOLEAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_BOOLEAN.h; path = Classes/ARRAY_BOOLEAN.h; sourceTree = "<group>"; };
 		D16CE1B615A2C18800F06EE6 /* functions_curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = functions_curl.h; sourceTree = "<group>"; };
@@ -158,12 +158,12 @@
 				D16CE20015A2C3CE00F06EE6 /* libiconv.dylib in Frameworks */,
 				D16CE23C15A2C54200F06EE6 /* AppKit.framework in Frameworks */,
 				D1261F8F15D5FDCE001C0DA0 /* libcrypto.1.0.0.dylib in Frameworks */,
-				D1261F9015D5FDCE001C0DA0 /* libcurl.4.dylib in Frameworks */,
-				D1261F9115D5FDCE001C0DA0 /* libidn.11.dylib in Frameworks */,
 				D1261F9215D5FDCE001C0DA0 /* libjson.dylib in Frameworks */,
-				D1261F9315D5FDCE001C0DA0 /* libssh2.1.dylib in Frameworks */,
 				D1261F9415D5FDCE001C0DA0 /* libssl.1.0.0.dylib in Frameworks */,
-				D1261F9515D5FDCE001C0DA0 /* libz.1.2.6.dylib in Frameworks */,
+				D154C4C7162C810F00E6FD6C /* libcurl.7.28.0.dylib in Frameworks */,
+				D154C4D2162C811F00E6FD6C /* libssh2.1.4.2.dylib in Frameworks */,
+				D154C4D4162C812500E6FD6C /* libz.1.2.7.dylib in Frameworks */,
+				D154C4F0162C836700E6FD6C /* libidn.1.24.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,13 +185,13 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				D154C4EF162C836700E6FD6C /* libidn.1.24.dylib */,
 				D1261F8815D5FDCE001C0DA0 /* libcrypto.1.0.0.dylib */,
-				D1261F8915D5FDCE001C0DA0 /* libcurl.4.dylib */,
-				D1261F8A15D5FDCE001C0DA0 /* libidn.11.dylib */,
+				D154C4C6162C810F00E6FD6C /* libcurl.7.28.0.dylib */,
 				D1261F8B15D5FDCE001C0DA0 /* libjson.dylib */,
-				D1261F8C15D5FDCE001C0DA0 /* libssh2.1.dylib */,
+				D154C4D1162C811F00E6FD6C /* libssh2.1.4.2.dylib */,
 				D1261F8D15D5FDCE001C0DA0 /* libssl.1.0.0.dylib */,
-				D1261F8E15D5FDCE001C0DA0 /* libz.1.2.6.dylib */,
+				D154C4D3162C812500E6FD6C /* libz.1.2.7.dylib */,
 				08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */,
 				D130064E12F02D9700702C0E /* Cocoa.framework */,
 				D16CE1FF15A2C3CE00F06EE6 /* libiconv.dylib */,
@@ -484,9 +484,13 @@
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/sample.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -527,9 +531,13 @@
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/sample.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -567,9 +575,13 @@
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/sample.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -590,17 +602,15 @@
 		42D60B440A9DDBC8002ABB42 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_VERSION = 4.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OBJROOT = "$(SRCROOT)/build";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 				SYMROOT = "$(SRCROOT)/Sample.4dbase/Plugins";
 				USER_HEADER_SEARCH_PATHS = include;
 			};
@@ -609,17 +619,15 @@
 		42D60B450A9DDBC8002ABB42 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_VERSION = 4.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OBJROOT = "$(SRCROOT)/build";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 				SYMROOT = "$(SRCROOT)/Sample.4dbase/Plugins";
 				USER_HEADER_SEARCH_PATHS = include;
 			};
@@ -628,15 +636,13 @@
 		42D60B460A9DDBC8002ABB42 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_VERSION = 4.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 				SYMROOT = "$(SRCROOT)/Sample.4dbase/Plugins";
 				USER_HEADER_SEARCH_PATHS = include;
 			};
