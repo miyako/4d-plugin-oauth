@@ -45,289 +45,299 @@ void CommandDispatcher (int32_t pProcNum, sLONG_PTR *pResult, PackagePtr pParams
 		case kDeinitPlugin :
 			curl_global_cleanup();
 			break;			
-			// --- MISC
-			
+            // --- PKCS
+            
 		case 1 :
+			PEM_From_P12(pResult, pParams);
+			break;
+            
+            // --- MISC
+            
+		case 2 :
 			PICTURE_GET_RAW_DATA(pResult, pParams);
 			break;
-			
-		case 2 :
+            
+		case 3 :
 			STACK_Get_available_size(pResult, pParams);
 			break;
-			
-		case 3 :
+            
+		case 4 :
 			PROCESS_GET_LIST(pResult, pParams);
 			break;
-			
-		case 4 :
+            
+		case 5 :
 			PROCESS_Get_id(pResult, pParams);
 			break;
-			
-		case 5 :
+            
+		case 6 :
 			SYSTEM_Get_timestamp(pResult, pParams);
 			break;
-			
-		case 6 :
+            
+		case 7 :
 			SYSTEM_Get_timestring(pResult, pParams);
 			break;
-			
-		case 7 :
+            
+		case 8 :
 			SYSTEM_Generate_UUID(pResult, pParams);
 			break;
-			
-		case 8 :
+            
+		case 9 :
 			SYSTEM_Get_unixtime(pResult, pParams);
 			break;
-			
-		case 9 :
+            
+		case 10 :
 			STRUCTURE_Import_definition(pResult, pParams);
 			break;
-			
-		case 10 :
+            
+		case 11 :
 			VOLUME_Is_remote(pResult, pParams);
 			break;
-			
-		case 11 :
+            
+		case 12 :
 			VOLUME_Is_ejectable(pResult, pParams);
 			break;
-			
-		case 12 :
+            
+		case 13 :
 			PATH_Get_known_folder(pResult, pParams);
 			break;
-			
-		case 13 :
+            
+		case 14 :
 			PATH_From_user_selection(pResult, pParams);
 			break;
-			
-			// --- JSON
-			
-		case 14 :
+            
+            // --- JSON
+            
+		case 15 :
 			JSON_Strip_white_space(pResult, pParams);
 			break;
-			
-		case 15 :
+            
+		case 16 :
 			JSON_Parse_text(pResult, pParams);
 			break;
-			
-		case 16 :
+            
+		case 17 :
 			JSON_Export_to_text(pResult, pParams);
 			break;
-			
-		case 17 :
+            
+		case 18 :
 			JSON_CLOSE(pResult, pParams);
 			break;
-			
-		case 18 :
+            
+		case 19 :
 			JSON_New(pResult, pParams);
 			break;
-			
-		case 19 :
+            
+		case 20 :
 			JSON_GET_BOOL_ARRAY(pResult, pParams);
 			break;
-			
-		case 20 :
+            
+		case 21 :
 			JSON_GET_CHILD_NODES(pResult, pParams);
 			break;
-			
-		case 21 :
+            
+		case 22 :
 			JSON_GET_LONG_ARRAY(pResult, pParams);
 			break;
-			
-		case 22 :
+            
+		case 23 :
 			JSON_Get_child_by_name(pResult, pParams);
 			break;
-			
-		case 23 :
+            
+		case 24 :
 			JSON_Get_child_by_position(pResult, pParams);
 			break;
-			
-		case 24 :
+            
+		case 25 :
 			JSON_Get_comment(pResult, pParams);
 			break;
-			
-		case 25 :
+            
+		case 26 :
 			JSON_GET_TEXT_ARRAY(pResult, pParams);
 			break;
-			
-		case 26 :
+            
+		case 27 :
 			JSON_GET_REAL_ARRAY(pResult, pParams);
 			break;
-			
-		case 27 :
+            
+		case 28 :
 			JSON_Get_bool(pResult, pParams);
 			break;
-			
-		case 28 :
+            
+		case 29 :
 			JSON_Get_real(pResult, pParams);
 			break;
-			
-		case 29 :
+            
+		case 30 :
 			JSON_Get_long(pResult, pParams);
 			break;
-			
-		case 30 :
+            
+		case 31 :
 			JSON_Get_type(pResult, pParams);
 			break;
-			
-		case 31 :
+            
+		case 32 :
 			JSON_Get_name(pResult, pParams);
 			break;
-			
-		case 32 :
+            
+		case 33 :
 			JSON_Get_text(pResult, pParams);
 			break;
-			
-		case 33 :
+            
+		case 34 :
 			JSON_DELETE_ITEM_BY_NAME(pResult, pParams);
 			break;
-			
-		case 34 :
+            
+		case 35 :
 			JSON_DELETE_ITEM_BY_POSITION(pResult, pParams);
 			break;
-			
-		case 35 :
+            
+		case 36 :
 			JSON_SET_TYPE(pResult, pParams);
 			break;
-			
-		case 36 :
+            
+		case 37 :
 			JSON_SET_NULL(pResult, pParams);
 			break;
-			
-		case 37 :
+            
+		case 38 :
 			JSON_SET_COMMENT(pResult, pParams);
 			break;
-			
-		case 38 :
+            
+		case 39 :
 			JSON_SET_NAME(pResult, pParams);
 			break;
-			
-		case 39 :
+            
+		case 40 :
 			JSON_SET_TEXT(pResult, pParams);
 			break;
-			
-		case 40 :
+            
+		case 41 :
 			JSON_SET_LONG(pResult, pParams);
 			break;
-			
-		case 41 :
+            
+		case 42 :
 			JSON_SET_REAL(pResult, pParams);
 			break;
-			
-		case 42 :
+            
+		case 43 :
 			JSON_Append_bool_array(pResult, pParams);
 			break;
-			
-		case 43 :
+            
+		case 44 :
 			JSON_Append_real_array(pResult, pParams);
 			break;
-			
-		case 44 :
+            
+		case 45 :
 			JSON_Append_long_array(pResult, pParams);
 			break;
-			
-		case 45 :
+            
+		case 46 :
 			JSON_Append_text_array(pResult, pParams);
 			break;
-			
-		case 46 :
+            
+		case 47 :
 			JSON_Append_text(pResult, pParams);
 			break;
-			
-		case 47 :
+            
+		case 48 :
 			JSON_Append_long(pResult, pParams);
 			break;
-			
-		case 48 :
+            
+		case 49 :
 			JSON_Append_real(pResult, pParams);
 			break;
-			
-		case 49 :
+            
+		case 50 :
 			JSON_Append_bool(pResult, pParams);
 			break;
-			
-		case 50 :
+            
+		case 51 :
 			JSON_Append_node(pResult, pParams);
 			break;
-			
-		case 51 :
+            
+		case 52 :
 			JSON_SET_BOOL(pResult, pParams);
 			break;
-			
-		case 52 :
+            
+		case 53 :
 			JSON_CLEAR(pResult, pParams);
 			break;
-			
-			// --- ZIP
-			
-		case 53 :
+            
+            // --- ZIP
+            
+		case 54 :
 			Unzip(pResult, pParams);
 			break;
-			
-		case 54 :
+            
+		case 55 :
 			Zip(pResult, pParams);
 			break;
-			
-			// --- Common Crypto
-			
-		case 55 :
+            
+            // --- Common Crypto
+            
+		case 56 :
+			RSASHA256(pResult, pParams);
+			break;
+            
+		case 57 :
 			HMACMD5(pResult, pParams);
 			break;
-			
-		case 56 :
+            
+		case 58 :
 			HMACSHA1(pResult, pParams);
 			break;
-			
-		case 57 :
+            
+		case 59 :
 			HMACSHA256(pResult, pParams);
 			break;
-			
-		case 58 :
+            
+		case 60 :
 			HMACSHA384(pResult, pParams);
 			break;
-			
-		case 59 :
+            
+		case 61 :
 			HMACSHA512(pResult, pParams);
 			break;
-			
-		case 60 :
+            
+		case 62 :
 			SHA384(pResult, pParams);
 			break;
-			
-		case 61 :
+            
+		case 63 :
 			SHA512(pResult, pParams);
 			break;
-			
-		case 62 :
+            
+		case 64 :
 			MD5(pResult, pParams);
 			break;
-			
-		case 63 :
+            
+		case 65 :
 			SHA1(pResult, pParams);
 			break;
-			
-		case 64 :
+            
+		case 66 :
 			SHA256(pResult, pParams);
 			break;
-			
-			// --- cURL
-			
-		case 65 :
+            
+            // --- cURL
+            
+		case 67 :
 			_cURL(pResult, pParams);
 			break;
-			
-		case 66 :
+            
+		case 68 :
 			cURL_Escape_url(pResult, pParams);
 			break;
-			
-		case 67 :
+            
+		case 69 :
 			cURL_Unescape_url(pResult, pParams);
 			break;
-			
-		case 68 :
+            
+		case 70 :
 			cURL_Get_version(pResult, pParams);
 			break;
-			
-		case 69 :
+            
+		case 71 :
 			cURL_Get_date(pResult, pParams);
 			break;
 			

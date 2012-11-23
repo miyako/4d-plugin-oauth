@@ -5,6 +5,7 @@
 #include "openssl/evp.h"
 #include "openssl/buffer.h"
 #include "openssl/hmac.h"
+#include "openssl/pkcs12.h"
 
 #ifndef _CC_COMMON_HMAC_H_
 void CC_EVP(const EVP_MD *evp, uint32_t mlen, const void *data, uint32_t len, unsigned char *md)
@@ -373,3 +374,117 @@ void HMACMD5(sLONG_PTR *pResult, PackagePtr pParams)
 	returnValue.setReturn(pResult);
 }
 
+// ------------------------------------- PKCS -------------------------------------
+
+
+void PEM_From_P12(sLONG_PTR *pResult, PackagePtr pParams)
+{
+	C_BLOB Param1;
+	C_BLOB Param2;
+	C_TEXT Param3;
+	C_TEXT returnValue;
+	
+	Param1.fromParamAtIndex(pParams, 1);
+	Param3.fromParamAtIndex(pParams, 3);	
+	
+	BIO *bio = BIO_new_mem_buf((void *)Param1.getBytesPtr(), Param1.getBytesLength());
+
+	if(bio){
+		
+		PKCS12 *p12 = d2i_PKCS12_bio(bio, NULL);
+		
+		if(p12){
+			
+			EVP_PKEY *key = NULL;
+			X509 *cert = NULL;
+			
+			CUTF8String pass;
+			Param3.copyUTF8String(&pass);
+			
+			if(PKCS12_parse(p12, (const char *)pass.c_str(), &key, &cert, NULL)){
+				
+				BIO *pem = BIO_new(BIO_s_mem());
+				
+				if(pem){
+					
+					PEM_write_bio_PrivateKey(pem, key, NULL, NULL, NULL, NULL, (void *)pass.c_str());
+					
+					char *buf = NULL;
+					
+					int len = BIO_get_mem_data(pem, &buf);
+					
+					if(len){
+						Param2.setBytes((const uint8_t *)buf, len);
+						Param2.toParamAtIndex(pParams, 2);
+						CUTF8String pemStr = CUTF8String((const uint8_t *)buf, len);
+						returnValue.setUTF8String(&pemStr);
+					}
+					
+					BIO_free(pem);
+					
+				}
+			}
+		}
+		
+		BIO_free(bio);
+		
+	}	
+	
+	Param2.toParamAtIndex(pParams, 2);
+	returnValue.setReturn(pResult);
+}
+
+void RSASHA256(sLONG_PTR *pResult, PackagePtr pParams)
+{
+	C_BLOB Param1;
+	C_BLOB Param2;
+	C_LONGINT Param3;
+	C_TEXT returnValue;
+    
+	Param1.fromParamAtIndex(pParams, 1);
+	Param2.fromParamAtIndex(pParams, 2);
+	Param3.fromParamAtIndex(pParams, 3);
+
+	uint8_t *buf = (uint8_t *)calloc(32, sizeof(uint8_t)); 
+	
+	CC_SHA256((unsigned char *)Param1.getBytesPtr(), Param1.getBytesLength(), buf);	    
+    
+    unsigned int signatureLength = 0;
+    
+	BIO *bio = BIO_new_mem_buf((void *)Param2.getBytesPtr(), Param2.getBytesLength());
+	
+	if(bio){
+		
+		RSA *key = NULL;
+		key = PEM_read_bio_RSAPrivateKey(bio, NULL, NULL, NULL);	
+		
+		if(key){
+			
+			uint8_t *sgn = (uint8_t *)calloc(RSA_size(key), sizeof(uint8_t)); 
+			
+			if(RSA_sign(NID_sha256, buf, 32, sgn, &signatureLength, key)){
+				
+				C_BLOB temp;
+				temp.setBytes((const uint8_t *)sgn, signatureLength);
+				
+				switch (Param3.getIntValue()) 
+				{
+					case 1:
+						temp.toB64Text(&returnValue);	
+						break;
+					default:
+						temp.toHexText(&returnValue);	
+						break;
+				}
+			}
+			
+			free(sgn);
+		}
+		
+		BIO_free(bio);
+	}
+    
+	free(buf);
+	
+	returnValue.setReturn(pResult);
+}
