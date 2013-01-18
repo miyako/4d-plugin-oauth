@@ -25,6 +25,9 @@ private:
 
 	CUTF16StringArray* _CUTF16StringArray;
 	
+	void convertFromUTF8(const CUTF8String* fromString, CUTF16String* toString);		
+	void convertToUTF8(const CUTF16String* fromString, CUTF8String* toString);
+        
 public:
  
 	void fromParamAtIndex(PackagePtr pParams, uint32_t index);
@@ -45,16 +48,13 @@ public:
 	
 #if VERSIONMAC
 #ifdef __OBJC__	
-	void appendUTF16String(const NSString* pString);		
-	void setUTF16StringAtIndex(NSString* pString, uint32_t index);		
+	void appendUTF16String(NSString* pString);		
+	void setUTF16StringAtIndex(NSString* pString, uint32_t index);
 #endif
 #endif
 	
 	void copyUTF16StringAtIndex(CUTF16String* pString, uint32_t index);	
 	void copyUTF8StringAtIndex(CUTF8String* pString, uint32_t index);	
-	
-	void convertFromUTF8(const CUTF8String* fromString, CUTF16String* toString);		
-	void convertToUTF8(const CUTF16String* fromString, CUTF8String* toString);
 	
 	uint32_t getSize();
 	void setSize(uint32_t size);

@@ -73,85 +73,110 @@ NSString* C_TEXT::copyUTF16String()
 	return [[NSString alloc]initWithCharacters:this->_CUTF16String->c_str() length:this->_CUTF16String->length()];
 }
 
-bool C_TEXT::convertPathSystemToPOSIX()
-{	
-	bool success = false;
+NSString* C_TEXT::copyPath()
+{
+	NSString *path = @"";	
 	
-	NSString* str = this->copyUTF16String();
+	NSURL *u = this->copyUrl();
 	
-	NSURL * url = (NSURL *)CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)str, kCFURLHFSPathStyle, false);	
-	
-	if(url)
-	{
-		NSString *path = (NSString *)CFURLCopyFileSystemPath((CFURLRef)url, kCFURLPOSIXPathStyle);
-		this->setUTF16String(path);
-		[path release];
-		[url release];	
-		success = true;
+	if(u){
+		path = (NSString *)CFURLCopyFileSystemPath((CFURLRef)u, kCFURLPOSIXPathStyle);
+		[u release];
 	}
 	
-	[str release];
-	
-	return success;
+	return path;
+
+}		
+
+void C_TEXT::convertPath()
+{
+	NSString *posixPath = this->copyPath();
+	this->setUTF16String(posixPath);
+	[posixPath release];
 }
 
-bool C_TEXT::convertPathPOSIXToSystem()
+NSURL *C_TEXT::copyUrl()
 {
-	bool success = false;
+	NSURL *u = NULL;
 	
-	NSString* str = this->copyUTF16String();
-	
-	NSURL * url = (NSURL *)CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)str, kCFURLPOSIXPathStyle, false);	
-	
-	if(url)
-	{
-		NSString *path = (NSString *)CFURLCopyFileSystemPath((CFURLRef)url, kCFURLHFSPathStyle);
-		this->setUTF16String(path);
-		[path release];
-		[url release];	
-		success = true;
-	}
-	
+	NSString *str = this->copyUTF16String();
+	u = (NSURL *)CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)str, kCFURLHFSPathStyle, false);
 	[str release];
 	
-	return success;	
+	return u;
+}
+
+void C_TEXT::setPath(NSString* path)
+{
+	if(path){
+		NSURL *u = (NSURL *)CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)path, kCFURLPOSIXPathStyle, false);
+		
+		if(u){
+			NSString *str = (NSString *)CFURLCopyFileSystemPath((CFURLRef)u, kCFURLHFSPathStyle);
+			this->setUTF16String(str);
+			[str release];
+			[u release];
+		}
+
+	}
 }
 #endif
 #endif
 
 void C_TEXT::convertFromUTF8(const CUTF8String* fromString, CUTF16String* toString)	
 {
-	uint32_t size = ((uint32_t)fromString->length() * sizeof(PA_Unichar)) + sizeof(PA_Unichar);
-	std::vector<uint8_t> buf(size);
+#ifdef _WIN32
+	int len = MultiByteToWideChar(CP_UTF8, 0, (LPCSTR)fromString->c_str(), fromString->length(), NULL, 0);
 	
-	uint32_t len = PA_ConvertCharsetToCharset(
-											  (char *)fromString->c_str(),
-											  (uint32_t)fromString->length(),
-											  eVTC_UTF_8,
-											  (char *)&buf[0],
-											  size,
-											  eVTC_UTF_16
-											  );
+	if(len){
+		std::vector<uint8_t> buf((len + 1) * sizeof(PA_Unichar));
+		if(MultiByteToWideChar(CP_UTF8, 0, (LPCSTR)fromString->c_str(), fromString->length(), (LPWSTR)&buf[0], len)){
+			*toString = CUTF16String((const PA_Unichar *)&buf[0]);
+		}
+	}else{
+			*toString = CUTF16String((const PA_Unichar *)L"");
+	}
 	
-//	*toString = CUTF16String((const PA_Unichar *)&buf[0], len);	
-	*toString = CUTF16String((const PA_Unichar *)&buf[0], len/2);		
+#else
+	CFStringRef str = CFStringCreateWithBytes(kCFAllocatorDefault, fromString->c_str(), fromString->length(), kCFStringEncodingUTF8, true);
+	if(str){
+		int len = CFStringGetLength(str)+1;
+		std::vector<uint8_t> buf(len * sizeof(PA_Unichar));
+		CFStringGetCharacters(str, CFRangeMake(0, len), (UniChar *)&buf[0]);
+		*toString = CUTF16String((const PA_Unichar *)&buf[0]);
+		CFRelease(str);
+	}
+#endif	
 }
 
 void C_TEXT::convertToUTF8(const CUTF16String* fromString, CUTF8String* toString)
 {
-	uint32_t size = ((uint32_t)fromString->length() * 4) + sizeof(uint8_t);
-	std::vector<uint8_t> buf(size);
+#ifdef _WIN32
+	int len = WideCharToMultiByte(CP_UTF8, 0, (LPCWSTR)fromString->c_str(), fromString->length(), NULL, 0, NULL, NULL);
 	
-	uint32_t len = PA_ConvertCharsetToCharset(
-											  (char *)fromString->c_str(),
-											  (uint32_t)fromString->length() * sizeof(PA_Unichar),
-											  eVTC_UTF_16,
-											  (char *)&buf[0],
-											  size,
-											  eVTC_UTF_8
-											  );
+	if(len){
+		std::vector<uint8_t> buf(len + 1);
+		if(WideCharToMultiByte(CP_UTF8, 0, (LPCWSTR)fromString->c_str(), fromString->length(), (LPSTR)&buf[0], len, NULL, NULL)){
+			*toString = CUTF8String((const uint8_t *)&buf[0]);
+		}
+	}else{
+			*toString = CUTF8String((const uint8_t *)"");
+	}
+
+#else
+	CFStringRef str = CFStringCreateWithCharacters(kCFAllocatorDefault, (const UniChar *)fromString->c_str(), fromString->length());
+	if(str){
+		
+		size_t size = CFStringGetMaximumSizeForEncoding(CFStringGetLength(str), kCFStringEncodingUTF8) + sizeof(uint8_t);
+		std::vector<uint8_t> buf(size);
+		CFIndex len = 0;
+		CFStringGetBytes(str, CFRangeMake(0, CFStringGetLength(str)), kCFStringEncodingUTF8, 0, true, (UInt8 *)&buf[0], size, &len);
+
+		*toString = CUTF8String((const uint8_t *)&buf[0], len);	
+		CFRelease(str);
+	}	
 	
-	*toString = CUTF8String((const uint8_t *)&buf[0], len);
+#endif
 }
 
 void C_TEXT::setUTF8String(CUTF8String* pString)
@@ -183,6 +208,17 @@ void C_TEXT::copyUTF16String(CUTF16String* pString)
 void C_TEXT::copyUTF8String(CUTF8String* pString)
 {
 	convertToUTF8(this->_CUTF16String, pString);	
+}
+
+void C_TEXT::copyPath(CUTF8String* pString)
+{
+#if VERSIONMAC	
+	NSString *path = this->copyPath();
+	*pString = CUTF8String((const uint8_t *)[path UTF8String]);
+	[path release];
+#else
+	this->copyUTF8String(pString);
+#endif
 }
 
 C_TEXT::C_TEXT() : _CUTF16String(new CUTF16String)

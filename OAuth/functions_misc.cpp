@@ -508,10 +508,8 @@ void VOLUME_Is_ejectable(sLONG_PTR *pResult, PackagePtr pParams)
 			returnValue.setIntValue(1);
 		}
 	}
-#else
-	Param1.convertPathSystemToPOSIX();
-	
-	NSString *path = Param1.copyUTF16String();
+#else	
+	NSString *path = Param1.copyPath();
 	
 	int flag; 
 	
@@ -558,10 +556,8 @@ void VOLUME_Is_remote(sLONG_PTR *pResult, PackagePtr pParams)
 			returnValue.setIntValue(1);
 		}
 	}
-#else
-	Param1.convertPathSystemToPOSIX();
-	
-	NSString *path = Param1.copyUTF16String();
+#else	
+	NSString *path = Param1.copyPath();
 	
 	int flag; 
 	
