@@ -159,7 +159,7 @@
       <EntryPointSymbol>
       </EntryPointSymbol>
       <AdditionalLibraryDirectories>windows</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libjson.lib;libz.1.2.7.lib;libssl.1.0.0.lib;libssh2.1.4.2.lib;libidn.1.24.lib;libcurl.7.28.0.lib;libcrypto.1.0.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libjson.lib;libz.1.2.7.lib;libssl.1.0.0.lib;libssh2.1.4.2.lib;libidn.1.24.lib;libcurl.7.29.0.lib;libcrypto.1.0.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -182,7 +182,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <AdditionalLibraryDirectories>windows64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libjson.lib;libz.1.2.7.lib;libssl.1.0.0.lib;libssh2.1.4.2.lib;libidn.1.24.lib;libcurl.7.28.0.lib;libcrypto.1.0.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libjson.lib;libz.1.2.7.lib;libssl.1.0.0.lib;libssh2.1.4.2.lib;libidn.1.24.lib;libcurl.7.29.0.lib;libcrypto.1.0.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
