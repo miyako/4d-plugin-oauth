@@ -50,3 +50,5 @@ void JSON_Append_bool(sLONG_PTR *pResult, PackagePtr pParams);
 void JSON_Append_node(sLONG_PTR *pResult, PackagePtr pParams);
 void JSON_SET_BOOL(sLONG_PTR *pResult, PackagePtr pParams);
 void JSON_CLEAR(sLONG_PTR *pResult, PackagePtr pParams);
+void JSON_Append_array(sLONG_PTR *pResult, PackagePtr pParams);
+void JSON_Append_array_element(sLONG_PTR *pResult, PackagePtr pParams);

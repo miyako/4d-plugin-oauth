@@ -871,7 +871,9 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
         
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         
-        error = curl_easy_perform(curl);
+        //error = curl_easy_perform(curl);
+		void (*_PA_YieldAbsolute)(void) = PA_YieldAbsolute;
+        error = curl_easy_perform_with_yield(curl, _PA_YieldAbsolute);
         
         if(values_CURLOPT_MAIL_RCPT) curl_slist_free_all(values_CURLOPT_MAIL_RCPT);
         

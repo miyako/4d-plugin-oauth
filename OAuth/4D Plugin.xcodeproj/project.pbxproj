@@ -33,7 +33,6 @@
 		D1392DDA13582171004911A5 /* C_BLOB.h in Headers */ = {isa = PBXBuildFile; fileRef = D1392DD813582171004911A5 /* C_BLOB.h */; };
 		D13E88A013543F3800C1F956 /* ARRAY_REAL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13E889E13543F3800C1F956 /* ARRAY_REAL.cpp */; };
 		D13E88A113543F3800C1F956 /* ARRAY_REAL.h in Headers */ = {isa = PBXBuildFile; fileRef = D13E889F13543F3800C1F956 /* ARRAY_REAL.h */; };
-		D154C4C7162C810F00E6FD6C /* libcurl.7.28.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D154C4C6162C810F00E6FD6C /* libcurl.7.28.0.dylib */; };
 		D154C4D2162C811F00E6FD6C /* libssh2.1.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D154C4D1162C811F00E6FD6C /* libssh2.1.4.2.dylib */; };
 		D154C4D4162C812500E6FD6C /* libz.1.2.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D154C4D3162C812500E6FD6C /* libz.1.2.7.dylib */; };
 		D154C4F0162C836700E6FD6C /* libidn.1.24.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D154C4EF162C836700E6FD6C /* libidn.1.24.dylib */; };
@@ -74,6 +73,7 @@
 		D19CC1831353782E0004336E /* C_REAL.h in Headers */ = {isa = PBXBuildFile; fileRef = D19CC17B1353782E0004336E /* C_REAL.h */; };
 		D19CC1841353782E0004336E /* C_TEXT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19CC17C1353782E0004336E /* C_TEXT.cpp */; };
 		D19CC1851353782E0004336E /* C_TEXT.h in Headers */ = {isa = PBXBuildFile; fileRef = D19CC17D1353782E0004336E /* C_TEXT.h */; };
+		D1CC379016CCB2EC00B933C1 /* libcurl.7.29.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CC378F16CCB2EC00B933C1 /* libcurl.7.29.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,7 +105,6 @@
 		D1392DD813582171004911A5 /* C_BLOB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_BLOB.h; path = Classes/C_BLOB.h; sourceTree = "<group>"; };
 		D13E889E13543F3800C1F956 /* ARRAY_REAL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_REAL.cpp; path = Classes/ARRAY_REAL.cpp; sourceTree = "<group>"; };
 		D13E889F13543F3800C1F956 /* ARRAY_REAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_REAL.h; path = Classes/ARRAY_REAL.h; sourceTree = "<group>"; };
-		D154C4C6162C810F00E6FD6C /* libcurl.7.28.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.7.28.0.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libcurl.7.28.0.dylib; sourceTree = "<group>"; };
 		D154C4D1162C811F00E6FD6C /* libssh2.1.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssh2.1.4.2.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libssh2.1.4.2.dylib; sourceTree = "<group>"; };
 		D154C4D3162C812500E6FD6C /* libz.1.2.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.7.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libz.1.2.7.dylib; sourceTree = "<group>"; };
 		D154C4EF162C836700E6FD6C /* libidn.1.24.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libidn.1.24.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libidn.1.24.dylib; sourceTree = "<group>"; };
@@ -146,6 +145,7 @@
 		D19CC17B1353782E0004336E /* C_REAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_REAL.h; path = classes/C_REAL.h; sourceTree = "<group>"; };
 		D19CC17C1353782E0004336E /* C_TEXT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_TEXT.cpp; path = classes/C_TEXT.cpp; sourceTree = "<group>"; };
 		D19CC17D1353782E0004336E /* C_TEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_TEXT.h; path = classes/C_TEXT.h; sourceTree = "<group>"; };
+		D1CC378F16CCB2EC00B933C1 /* libcurl.7.29.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.7.29.0.dylib; path = OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS/libcurl.7.29.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,10 +160,10 @@
 				D1261F8F15D5FDCE001C0DA0 /* libcrypto.1.0.0.dylib in Frameworks */,
 				D1261F9215D5FDCE001C0DA0 /* libjson.dylib in Frameworks */,
 				D1261F9415D5FDCE001C0DA0 /* libssl.1.0.0.dylib in Frameworks */,
-				D154C4C7162C810F00E6FD6C /* libcurl.7.28.0.dylib in Frameworks */,
 				D154C4D2162C811F00E6FD6C /* libssh2.1.4.2.dylib in Frameworks */,
 				D154C4D4162C812500E6FD6C /* libz.1.2.7.dylib in Frameworks */,
 				D154C4F0162C836700E6FD6C /* libidn.1.24.dylib in Frameworks */,
+				D1CC379016CCB2EC00B933C1 /* libcurl.7.29.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +187,6 @@
 			children = (
 				D154C4EF162C836700E6FD6C /* libidn.1.24.dylib */,
 				D1261F8815D5FDCE001C0DA0 /* libcrypto.1.0.0.dylib */,
-				D154C4C6162C810F00E6FD6C /* libcurl.7.28.0.dylib */,
 				D1261F8B15D5FDCE001C0DA0 /* libjson.dylib */,
 				D154C4D1162C811F00E6FD6C /* libssh2.1.4.2.dylib */,
 				D1261F8D15D5FDCE001C0DA0 /* libssl.1.0.0.dylib */,
@@ -196,6 +195,7 @@
 				D130064E12F02D9700702C0E /* Cocoa.framework */,
 				D16CE1FF15A2C3CE00F06EE6 /* libiconv.dylib */,
 				D16CE23B15A2C54200F06EE6 /* AppKit.framework */,
+				D1CC378F16CCB2EC00B933C1 /* libcurl.7.29.0.dylib */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -486,11 +486,13 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/sample.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -533,11 +535,13 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/sample.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -577,11 +581,13 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/sample.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/OAuth.4dbase/Plugins/OAuth.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";

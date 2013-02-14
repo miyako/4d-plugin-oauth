@@ -116,10 +116,12 @@ void JSON_Append_node(sLONG_PTR *pResult, PackagePtr pParams)
 {
 	C_TEXT json;
 	C_TEXT node;
+	C_TEXT nodeText;	
 	C_TEXT returnValue;
 	
 	json.fromParamAtIndex(pParams, 1);
 	node.fromParamAtIndex(pParams, 2);
+	nodeText.fromParamAtIndex(pParams, 3);
 	
 	JSONNODE *n = _fromHex(&json);
 	
@@ -127,9 +129,21 @@ void JSON_Append_node(sLONG_PTR *pResult, PackagePtr pParams)
 		std::wstring nodeName;
 		_copyString(&node, &nodeName);
 		
-		JSONNODE *node = json_new(JSON_NODE);
-		json_set_name(node, nodeName.c_str());
-		json_push_back(n, node);
+		JSONNODE *node;
+		
+		if(!nodeText.getUTF16Length()){
+			node = json_new(JSON_NODE);
+		}else{
+			std::wstring w;
+			_copyString(&nodeText, &w);
+			node = json_parse(w.c_str());
+		}
+		
+		if(node){
+			json_set_name(node, nodeName.c_str());
+			json_push_back(n, node);	
+		}
+		
 		_toHex(node, &returnValue);		
 	}
 	
@@ -364,6 +378,63 @@ void JSON_Append_bool_array(sLONG_PTR *pResult, PackagePtr pParams)
 		
 		json_push_back(n, node);
 		_toHex(node, &returnValue);
+	}
+	
+	returnValue.setReturn(pResult);
+}
+
+void JSON_Append_array(sLONG_PTR *pResult, PackagePtr pParams)
+{
+	C_TEXT json;
+	C_TEXT node;
+	C_TEXT returnValue;
+	
+	json.fromParamAtIndex(pParams, 1);
+	node.fromParamAtIndex(pParams, 2);
+	
+	JSONNODE *n = _fromHex(&json);
+	
+	if(n){
+		std::wstring nodeName;
+		_copyString(&node, &nodeName);
+
+		JSONNODE *node = json_new(JSON_NODE);
+		
+		json_set_name(node, nodeName.c_str());
+		json_cast(node, JSON_ARRAY);
+		json_push_back(n, node);	
+		
+		_toHex(node, &returnValue);		
+	}
+	
+	returnValue.setReturn(pResult);
+}
+
+void JSON_Append_array_element(sLONG_PTR *pResult, PackagePtr pParams)
+{
+	C_TEXT json;
+	C_TEXT source;
+	C_TEXT returnValue;
+	
+	json.fromParamAtIndex(pParams, 1);
+	source.fromParamAtIndex(pParams, 2);
+	
+	JSONNODE *n = _fromHex(&json);
+	
+	if(n){
+	
+		if(json_type(n) == JSON_ARRAY)
+		{
+			JSONNODE *node = _fromHex(&source);
+			
+			if(node){
+				JSONNODE *nodeCopy = json_duplicate(node);
+				json_push_back(n, nodeCopy);
+				_toHex(nodeCopy, &returnValue);
+			}
+			
+		}
+
 	}
 	
 	returnValue.setReturn(pResult);
@@ -909,6 +980,8 @@ void JSON_New(sLONG_PTR *pResult, PackagePtr pParams)
 	
 	JSONNODE *n = json_new(JSON_NODE);
 	
+	_addJsonRootToList(n);
+	
 	_toHex(n, &returnValue);
 	
 	returnValue.setReturn(pResult);
@@ -922,7 +995,9 @@ void JSON_CLOSE(sLONG_PTR *pResult, PackagePtr pParams)
 	
 	JSONNODE *n = _fromHex(&json);
 	
-	if(n) json_delete(n);
+	if(_removeJsonRootFromList(n)){
+		json_delete(n);
+	}
 }
 
 void JSON_Export_to_text(sLONG_PTR *pResult, PackagePtr pParams)
@@ -964,6 +1039,8 @@ void JSON_Parse_text(sLONG_PTR *pResult, PackagePtr pParams)
 	_copyString(&source, &w);
 	
 	JSONNODE *n = json_parse(w.c_str());
+	
+	_addJsonRootToList(n);
 	
 	_toHex(n, &returnValue);
 	

@@ -12,10 +12,29 @@
 <span class="title">Summary</span>
 </p>
 <ex4D:plugin-description xmlns:ex4D="http://www.4d.com/plugin">
-<!-- write documentation for OAuth here -->
 <p>This plugin is a combined edition of the cURL, JSON, ZIP, Common Crypto and MISC plugins.
 It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <p>Note: The plugin commands IDs have shift since the introduction of PKCS and RSA commands. If you have an old version of the plugin in your structure, remove it, reopen (to reset the tokens) install the new plugin and open again.</p>
+<p>Change list for 2013-02-14</p>
+<p>New Command</p>
+<p>
+<a href="#command:3,55">JSON Append array element</a>
+</p>
+<p>Creates a copy of an existing node and appends it as an array element to the specified node.</p>
+<p>
+<a href="#command:3,54">JSON Append array</a>
+</p>
+<p>Shorthand for Append node and SET TYPE to JSON_ARRAY.</p>
+<p>Modified Command</p>
+<p>
+<a href="http://curl.haxx.se/changes.html">libcurl</a> version is updated to 7.29.0 better support for IMAP.</p>
+<p>
+<a href="#command:6,69">cURL</a> now yields to 4D to avoid hang during long requests.</p>
+<p>
+<a href="#command:6,18">JSON CLOSE</a> now checks if passed node is a valid root, to avoid over release.</p>
+<p>
+<a href="#command:3,51">JSON Append node</a> now accepts a 3rd parameter, which can be a JSON text (object or array) to insert directly to an existing node.</p>
+<!-- write documentation for OAuth here -->
 </ex4D:plugin-description>
 <a name="command:1"></a>
 <h2>PKCS</h2>
@@ -249,6 +268,40 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 </ex4D:command-description>
 <a name="command:3"></a>
 <h2>JSON</h2>
+<a name="command:3,54"></a>
+<h3>JSON Append array</h3>
+<p>
+<code>TEXT:=JSON Append array (TEXT; TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append array here -->
+</ex4D:command-description>
+<a name="command:3,55"></a>
+<h3>JSON Append array element</h3>
+<p>
+<code>TEXT:=JSON Append array element (TEXT; TEXT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for JSON Append array element here -->
+</ex4D:command-description>
 <a name="command:3,50"></a>
 <h3>JSON Append bool</h3>
 <p>
@@ -320,7 +373,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <a name="command:3,51"></a>
 <h3>JSON Append node</h3>
 <p>
-<code>TEXT:=JSON Append node (TEXT; TEXT)</code>
+<code>TEXT:=JSON Append node (TEXT; TEXT; TEXT)</code>
 </p>
 <p>
 <code>returnValue</code> (TEXT)<br>
@@ -812,7 +865,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 </ex4D:command-description>
 <a name="command:4"></a>
 <h2>ZIP</h2>
-<a name="command:4,54"></a>
+<a name="command:4,56"></a>
 <h3>Unzip</h3>
 <p>
 <code>LONGINT:=Unzip (TEXT; TEXT; TEXT)</code>
@@ -829,7 +882,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for Unzip here -->
 </ex4D:command-description>
-<a name="command:4,55"></a>
+<a name="command:4,57"></a>
 <h3>Zip</h3>
 <p>
 <code>LONGINT:=Zip (TEXT; TEXT; TEXT)</code>
@@ -848,7 +901,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 </ex4D:command-description>
 <a name="command:5"></a>
 <h2>Common Crypto</h2>
-<a name="command:5,57"></a>
+<a name="command:5,59"></a>
 <h3>HMACMD5</h3>
 <p>
 <code>TEXT:=HMACMD5 (BLOB; BLOB; LONGINT)</code>
@@ -865,7 +918,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for HMACMD5 here -->
 </ex4D:command-description>
-<a name="command:5,58"></a>
+<a name="command:5,60"></a>
 <h3>HMACSHA1</h3>
 <p>
 <code>TEXT:=HMACSHA1 (BLOB; BLOB; LONGINT)</code>
@@ -882,7 +935,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for HMACSHA1 here -->
 </ex4D:command-description>
-<a name="command:5,59"></a>
+<a name="command:5,61"></a>
 <h3>HMACSHA256</h3>
 <p>
 <code>TEXT:=HMACSHA256 (BLOB; BLOB; LONGINT)</code>
@@ -899,7 +952,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for HMACSHA256 here -->
 </ex4D:command-description>
-<a name="command:5,60"></a>
+<a name="command:5,62"></a>
 <h3>HMACSHA384</h3>
 <p>
 <code>TEXT:=HMACSHA384 (BLOB; BLOB; LONGINT)</code>
@@ -916,7 +969,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for HMACSHA384 here -->
 </ex4D:command-description>
-<a name="command:5,61"></a>
+<a name="command:5,63"></a>
 <h3>HMACSHA512</h3>
 <p>
 <code>TEXT:=HMACSHA512 (BLOB; BLOB; LONGINT)</code>
@@ -933,7 +986,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for HMACSHA512 here -->
 </ex4D:command-description>
-<a name="command:5,64"></a>
+<a name="command:5,66"></a>
 <h3>MD5</h3>
 <p>
 <code>TEXT:=MD5 (BLOB; LONGINT)</code>
@@ -950,7 +1003,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for MD5 here -->
 </ex4D:command-description>
-<a name="command:5,56"></a>
+<a name="command:5,58"></a>
 <h3>RSASHA256</h3>
 <p>
 <code>TEXT:=RSASHA256 (BLOB; BLOB; LONGINT)</code>
@@ -967,7 +1020,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for RSASHA256 here -->
 </ex4D:command-description>
-<a name="command:5,65"></a>
+<a name="command:5,67"></a>
 <h3>SHA1</h3>
 <p>
 <code>TEXT:=SHA1 (BLOB; LONGINT)</code>
@@ -984,7 +1037,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for SHA1 here -->
 </ex4D:command-description>
-<a name="command:5,66"></a>
+<a name="command:5,68"></a>
 <h3>SHA256</h3>
 <p>
 <code>TEXT:=SHA256 (BLOB; LONGINT)</code>
@@ -1001,7 +1054,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for SHA256 here -->
 </ex4D:command-description>
-<a name="command:5,62"></a>
+<a name="command:5,64"></a>
 <h3>SHA384</h3>
 <p>
 <code>TEXT:=SHA384 (BLOB; LONGINT)</code>
@@ -1018,7 +1071,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for SHA384 here -->
 </ex4D:command-description>
-<a name="command:5,63"></a>
+<a name="command:5,65"></a>
 <h3>SHA512</h3>
 <p>
 <code>TEXT:=SHA512 (BLOB; LONGINT)</code>
@@ -1037,7 +1090,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 </ex4D:command-description>
 <a name="command:6"></a>
 <h2>cURL</h2>
-<a name="command:6,67"></a>
+<a name="command:6,69"></a>
 <h3>cURL</h3>
 <p>
 <code>LONGINT:=cURL (TEXT; ARRAY; ARRAY; BLOB; BLOB; ARRAY; ARRAY; ARRAY; ARRAY)</code>
@@ -1054,7 +1107,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for cURL here -->
 </ex4D:command-description>
-<a name="command:6,68"></a>
+<a name="command:6,70"></a>
 <h3>cURL Escape url</h3>
 <p>
 <code>TEXT:=cURL Escape url (TEXT)</code>
@@ -1071,7 +1124,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for cURL Escape url here -->
 </ex4D:command-description>
-<a name="command:6,71"></a>
+<a name="command:6,73"></a>
 <h3>cURL Get date</h3>
 <p>
 <code>LONGINT:=cURL Get date (TEXT; LONGINT)</code>
@@ -1088,7 +1141,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for cURL Get date here -->
 </ex4D:command-description>
-<a name="command:6,70"></a>
+<a name="command:6,72"></a>
 <h3>cURL Get version</h3>
 <p>
 <code>TEXT:=cURL Get version</code>
@@ -1105,7 +1158,7 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for cURL Get version here -->
 </ex4D:command-description>
-<a name="command:6,69"></a>
+<a name="command:6,71"></a>
 <h3>cURL Unescape url</h3>
 <p>
 <code>TEXT:=cURL Unescape url (TEXT)</code>
@@ -2533,6 +2586,6 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <!-- write documentation for CURLOPT_MAIL_AUTH (217) here-->
 </ex4D:constant>
 <p class="footer">
-<span class="title">Documentation Update: </span>2012-11-23T14:47:4101:00</p>
+<span class="title">Documentation Update: </span>2013-02-14T07:44:5209:00</p>
 </body>
 </html>
