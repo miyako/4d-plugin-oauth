@@ -617,11 +617,15 @@ void JSON_DELETE_ITEM_BY_NAME(sLONG_PTR *pResult, PackagePtr pParams)
 				i = json_find(n, w.c_str());
 				break;
 		}
-		
+		/*
 		while (i != json_end(n)){
 			json_erase(n, i);
 			++i;	
-		}	
+		}
+		 */
+		if (i != json_end(n)){
+			json_erase(n, i);	
+		}
 	}
 }
 
