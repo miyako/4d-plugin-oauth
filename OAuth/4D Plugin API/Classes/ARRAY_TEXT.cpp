@@ -97,8 +97,8 @@ void ARRAY_TEXT::convertFromUTF8(const CUTF8String* fromString, CUTF16String* to
 #else
            CFStringRef str = CFStringCreateWithBytes(kCFAllocatorDefault, fromString->c_str(), fromString->length(), kCFStringEncodingUTF8, true);
            if(str){
-               int len = CFStringGetLength(str)+1;
-               std::vector<uint8_t> buf(len * sizeof(PA_Unichar));
+               int len = CFStringGetLength(str);
+               std::vector<uint8_t> buf((len+1) * sizeof(PA_Unichar));
                CFStringGetCharacters(str, CFRangeMake(0, len), (UniChar *)&buf[0]);
                *toString = CUTF16String((const PA_Unichar *)&buf[0]);
                CFRelease(str);
@@ -160,6 +160,22 @@ void ARRAY_TEXT::setUTF16StringAtIndex(const PA_Unichar* pString, uint32_t len, 
 	this->setUTF16StringAtIndex(&u, index);
 }
 
+
+
+
+void ARRAY_TEXT::copyPathAtIndex(CUTF8String* pString, uint32_t index)
+{
+#if VERSIONMAC
+#ifdef __OBJC__	
+	NSString *path = this->copyPathAtIndex(index);
+	*pString = CUTF8String((const uint8_t *)[path UTF8String]);
+	[path release];
+#endif
+#else
+	this->copyUTF8StringAtIndex(pString, index);
+#endif		
+}
+	
 void ARRAY_TEXT::setUTF16StringAtIndex(CUTF16String* pString, uint32_t index)
 {
 	if(index < this->_CUTF16StringArray->size())
@@ -249,6 +265,41 @@ void ARRAY_TEXT::setUTF16StringAtIndex(NSString* pString, uint32_t index)
 	
 	if([pString getCString:(char *)&buf[0] maxLength:size encoding:NSUnicodeStringEncoding])
 		this->setUTF16StringAtIndex((const PA_Unichar *)&buf[0], len, index);	
+}
+
+NSString *ARRAY_TEXT::copyUTF16StringAtIndex(uint32_t index)
+{
+	CUTF16String strUtf16;
+	
+	strUtf16 = CUTF16String(this->_CUTF16StringArray->at(index));
+	
+	return [[NSString alloc]initWithCharacters:strUtf16.c_str() length:strUtf16.length()];
+}
+
+NSString *ARRAY_TEXT::copyPathAtIndex(uint32_t index){
+	
+	NSString *path = @"";
+	
+	NSURL *u = this->copyUrlAtIndex(index);
+	
+	if(u){
+		path = (NSString *)CFURLCopyFileSystemPath((CFURLRef)u, kCFURLPOSIXPathStyle);
+		[u release];
+	}
+	
+	return path;
+	
+}		
+NSURL *ARRAY_TEXT::copyUrlAtIndex(uint32_t index){
+	
+	NSURL *u = NULL;
+	
+	NSString *str = this->copyUTF16StringAtIndex(index);
+	u = (NSURL *)CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)str, kCFURLHFSPathStyle, false);
+	[str release];
+	
+	return u;
+	
 }
 #endif
 #endif
