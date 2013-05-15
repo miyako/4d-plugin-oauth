@@ -346,6 +346,13 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
                                                                       (const char *)(CUTF8String((const uint8_t *)"Accept: ") + value).c_str());
                         
 						break;
+						
+					case 10://CURLOPT_HTTP_EXPECT
+						
+						values_CURLOPT_HTTPHEADER = curl_slist_append(values_CURLOPT_HTTPHEADER,
+                                                                      (const char *)(CUTF8String((const uint8_t *)"Expect: ") + value).c_str());
+                        
+						break;						
                         
 						//integer options
 					case 42://CURLOPT_HEADER:

@@ -1,6 +1,6 @@
 
-OAuth/4D Plugin.xcodeproj/xcuserdata/miyako.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
+*.DS_Store
 
-OAuth/.DS_Store
+*.suo
 
-.DS_Store
+*.xcbkptlist
