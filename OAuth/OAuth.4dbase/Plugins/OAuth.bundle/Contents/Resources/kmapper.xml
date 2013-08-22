@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.4d.com/namespace/reserved/FP/Constants">
+   <appid>&quot;0&quot;</appid>
+   <fourdversmin>&quot;9.0.0&quot;</fourdversmin>
+   <fourdversmax>&quot;9.0.0&quot;</fourdversmax>
+   <command name="RSASHA256" str="20000" topic="58">
+      <param position="3" k="20004"/>
+   </command>
+   <command name="HMACMD5" str="20000" topic="59">
+      <param position="3" k="20004"/>
+   </command>
+   <command name="HMACSHA1" str="20000" topic="60">
+      <param position="3" k="20004"/>
+   </command>
+   <command name="HMACSHA256" str="20000" topic="61">
+      <param position="3" k="20004"/>
+   </command>
+   <command name="HMACSHA384" str="20000" topic="62">
+      <param position="3" k="20004"/>
+   </command>
+   <command name="HMACSHA512" str="20000" topic="63">
+      <param position="3" k="20004"/>
+   </command>
+   <command name="SHA384" str="20000" topic="64">
+      <param position="2" k="20004"/>
+   </command>
+   <command name="SHA512" str="20000" topic="65">
+      <param position="2" k="20004"/>
+   </command>
+   <command name="MD5" str="20000" topic="66">
+      <param position="2" k="20004"/>
+   </command>
+   <command name="SHA1" str="20000" topic="67">
+      <param position="2" k="20004"/>
+   </command>
+   <command name="SHA256" str="20000" topic="68">
+      <param position="2" k="20004"/>
+   </command>
+</application>
