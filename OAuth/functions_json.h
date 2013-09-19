@@ -8,7 +8,6 @@
 #else
 #define UTF32NATIVE "UTF-32BE"
 #endif
-#define NDEBUG
 #endif
 
 void JSON_Strip_white_space(sLONG_PTR *pResult, PackagePtr pParams);
