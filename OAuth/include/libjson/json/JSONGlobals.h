@@ -22,6 +22,20 @@ protected:														\
 	TYPE val;													\
 }
 
+#define json_global_decl_strconfig(TYPE, NAME, VALUE)			\
+class jsonSingleton ## NAME {									\
+public:															\
+	inline static TYPE & getValue() json_nothrow {				\
+		static jsonSingleton ## NAME single;					\
+		return single.val;										\
+	}															\
+protected:														\
+	inline jsonSingleton ## NAME() json_nothrow {				\
+		const std::string tmp = std::string(VALUE);				\
+		val = json_string(tmp.begin(), tmp.end());				\
+	}															\
+	TYPE val;													\
+}
 
 #define json_global(NAME) jsonSingleton ## NAME::getValue()
 
@@ -36,7 +50,7 @@ json_global_decl(json_string, CONST_NULL, JSON_TEXT("null"));
 #ifndef JSON_NEWLINE
 	json_global_decl(json_string, NEW_LINE, JSON_TEXT("\n"));
 #else
-	json_global_decl(json_string, NEW_LINE, JSON_TEXT(JSON_NEWLINE));
+	json_global_decl_strconfig(json_string, NEW_LINE, JSON_NEWLINE);
 #endif
 
 #ifdef JSON_WRITE_BASH_COMMENTS
@@ -46,7 +60,7 @@ json_global_decl(json_string, CONST_NULL, JSON_TEXT("null"));
 #endif
 
 #ifdef JSON_INDENT
-	json_global_decl(json_string, INDENT, JSON_TEXT(JSON_INDENT));
+	json_global_decl_strconfig(json_string, INDENT, JSON_INDENT);
 #endif
 
 #ifdef JSON_MUTEX_CALLBACKS

@@ -174,13 +174,13 @@
     #ifndef __cplusplus
 	   #error Turning off JSON_LIBRARY requires C++
     #endif
-    #include "Source/JSONNode.h"  //not used in this file, but libjson.h should be the only file required to use it embedded
-    #include "Source/JSONWorker.h"
-    #include "Source/JSONValidator.h"
-    #include "Source/JSONStream.h"
-    #include "Source/JSONPreparse.h"
+    #include "_internal/Source/JSONNode.h"  //not used in this file, but libjson.h should be the only file required to use it embedded
+    #include "_internal/Source/JSONWorker.h"
+    #include "_internal/Source/JSONValidator.h"
+    #include "_internal/Source/JSONStream.h"
+    #include "_internal/Source/JSONPreparse.h"
     #ifdef JSON_EXPOSE_BASE64
-	   #include "Source/JSON_Base64.h"
+	   #include "_internal/Source/JSON_Base64.h"
     #endif
     #ifndef JSON_NO_EXCEPTIONS
 	   #include <stdexcept>  //some methods throw exceptions

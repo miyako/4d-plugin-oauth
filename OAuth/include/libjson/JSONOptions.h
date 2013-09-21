@@ -71,7 +71,7 @@
  *  It's recommended that you also compile using the -Os option, as this will also
  *  reduce the size of the library
  */
-//#define JSON_LESS_MEMORY
+#define JSON_LESS_MEMORY
 
 
 /*
