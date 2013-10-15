@@ -333,6 +333,13 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
                         
 						break;
 						
+					case 23://CURLOPT_AUTHORIZATION_DATE
+						
+						values_CURLOPT_HTTPHEADER = curl_slist_append(values_CURLOPT_HTTPHEADER,
+                                                                      (const char *)(CUTF8String((const uint8_t *)"Authorization Date: ") + value).c_str());
+                        
+						break;
+						
 					case 8://CURLOPT_HTTP_CONTENT_TYPE
 						
 						values_CURLOPT_HTTPHEADER = curl_slist_append(values_CURLOPT_HTTPHEADER,
