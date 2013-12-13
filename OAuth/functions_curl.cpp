@@ -2,6 +2,7 @@
 
 std::map<uint32_t, uint32_t> _curl_write_method_ids;
 std::map<uint32_t, uint32_t> _curl_read_method_ids;
+std::map<uint32_t, uint32_t> _curl_debug_method_ids;
 
 void cURL_Get_version(sLONG_PTR *pResult, PackagePtr pParams)
 {
@@ -123,15 +124,46 @@ size_t _cURL_write_data(void *buffer, size_t size, size_t nmemb, C_BLOB &outData
                 PA_SetLongintVariable(&params[0], len);
                 PA_SetLongintVariable(&params[1], outData.getBytesLength());
                 PA_Variable statusCode = PA_ExecuteMethodByID(_curl_write_method_id, params, 2);
-                if(PA_GetVariableKind(statusCode) == eVK_Boolean)
+                if(PA_GetVariableKind(statusCode) == eVK_Boolean){
                     if(PA_GetBooleanVariable(statusCode)){
                         if(len){len=0;}else{len=1;}
                     }
+				}
+				PA_ClearVariable(&params[0]);
+				PA_ClearVariable(&params[1]);
 			}
         }
 	}
     
 	return len;
+}
+
+size_t _cURL_debug_data(CURL *_curl, curl_infotype infoType, char * buffer, size_t bufferLen, void *userData){
+    
+	PA_YieldAbsolute();
+    	
+    uint32_t processId = PA_GetCurrentProcessNumber();
+    uint32_t _curl_debug_method_id = 0;
+    
+    std::map<uint32_t, uint32_t>::iterator pos = _curl_debug_method_ids.find(processId);
+	
+	if(pos != _curl_debug_method_ids.end()) {
+		_curl_debug_method_id = pos->second;
+        if(_curl_debug_method_id){
+			if(!PA_IsProcessDying()){
+                PA_Variable	params[2];
+                params[0] = PA_CreateVariable(eVK_Longint);
+                params[1] = PA_CreateVariable(eVK_Blob);
+                PA_SetLongintVariable(&params[0], infoType);
+                PA_SetBlobVariable(&params[1], buffer, bufferLen);
+                PA_ExecuteMethodByID(_curl_debug_method_id, params, 2);   
+				PA_ClearVariable(&params[0]);
+				PA_ClearVariable(&params[1]);
+			}
+        }
+	}
+    
+	return 0;
 }
 
 size_t _cURL_read_data(void *buffer, size_t size, size_t nmemb, C_BLOB &inData){
@@ -158,10 +190,13 @@ size_t _cURL_read_data(void *buffer, size_t size, size_t nmemb, C_BLOB &inData){
                 PA_SetLongintVariable(&params[0], len);
                 PA_SetLongintVariable(&params[1], inData.getBytesLength());
                 PA_Variable statusCode = PA_ExecuteMethodByID(_curl_read_method_id, params, 2);
-                if(PA_GetVariableKind(statusCode) == eVK_Boolean)
+                if(PA_GetVariableKind(statusCode) == eVK_Boolean){
                     if(PA_GetBooleanVariable(statusCode)){
                         if(len){len=0;}else{len=1;}
                     }
+				}
+				PA_ClearVariable(&params[0]);
+				PA_ClearVariable(&params[1]);
 			}
         }
     }
@@ -176,12 +211,12 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 	ARRAY_TEXT Param3Values;
 	C_BLOB Param4InData;
 	C_BLOB Param5OutData;
-	C_LONGINT returnValue;
 	ARRAY_TEXT Param6DataNames;
 	ARRAY_TEXT Param7DataTypes;
 	ARRAY_TEXT Param8DataFileNames;
     PA_Variable Param9DataObjects;
-    
+	C_LONGINT returnValue;
+	
 	Param1Url.fromParamAtIndex(pParams, 1);
 	Param2Keys.fromParamAtIndex(pParams, 2);
 	Param3Values.fromParamAtIndex(pParams, 3);
@@ -214,6 +249,8 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 		error = curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, _cURL_write_data);
 		error = curl_easy_setopt(curl, CURLOPT_WRITEDATA, &Param5OutData);
         
+		error = curl_easy_setopt(curl, CURLOPT_DEBUGFUNCTION, _cURL_debug_data);
+		
 		struct curl_slist *values_CURLOPT_MAIL_RCPT = NULL;
         
 		struct curl_slist *values_CURLOPT_QUOTE = NULL;
@@ -234,7 +271,8 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 			CUTF16String methodName;
 			uint32_t _curl_write_method_id;
             uint32_t _curl_read_method_id;
-            
+            uint32_t _curl_debug_method_id;
+			
 			for(unsigned int i = 0; i < Param2Keys.getSize(); ++i){
 				
 				option = (CURLoption)Param2Keys.getIntValueAtIndex(i);
@@ -246,11 +284,19 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
                     case CURLOPT_WRITEDATA:
                     case CURLOPT_READDATA:
                         break;
+					case 94://CURLOPT_DEBUGFUNCTION
+                        Param3Values.copyUTF16StringAtIndex(&methodName, i);
+                        _curl_debug_method_id = PA_GetMethodID((PA_Unichar *)methodName.c_str());
+                        if(_curl_debug_method_id){
+							error = curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);	
+						}
+						_curl_debug_method_ids.insert(std::map<uint32_t, uint32_t>::value_type(processId, _curl_debug_method_id));
+                        break;	
                     case 11://CURLOPT_WRITEFUNCTION
                         Param3Values.copyUTF16StringAtIndex(&methodName, i);
                         _curl_write_method_id = PA_GetMethodID((PA_Unichar *)methodName.c_str());
                         _curl_write_method_ids.insert(std::map<uint32_t, uint32_t>::value_type(processId, _curl_write_method_id));
-                        break;
+						break;
                     case 12://CURLOPT_READFUNCTION
                         Param3Values.copyUTF16StringAtIndex(&methodName, i);
                         _curl_read_method_id = PA_GetMethodID((PA_Unichar *)methodName.c_str());
@@ -909,6 +955,9 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
         
         pos = _curl_read_method_ids.find(processId);
         if(pos != _curl_read_method_ids.end()) _curl_read_method_ids.erase(pos);
+		
+		pos = _curl_debug_method_ids.find(processId);
+        if(pos != _curl_debug_method_ids.end()) _curl_debug_method_ids.erase(pos);
         
 	}
 	
