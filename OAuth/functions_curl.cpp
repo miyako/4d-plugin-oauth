@@ -307,7 +307,7 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
                            && (size6 == size7)
                            && (size7 == size8)
                            && (size8 == size9)){
-                            for(unsigned int i = 0; i < size8; ++i){
+                            for(unsigned int i = 1; i < size8; ++i){
                                 
                                 CUTF8String formName;
                                 Param6DataNames.copyUTF8StringAtIndex(&formName, i);
@@ -341,10 +341,10 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
                                     curl_formadd(&post_CURLOPT_HTTPPOST,
                                                  &last_CURLOPT_HTTPPOST,
                                                  CURLFORM_COPYNAME, formName.c_str(),
-                                                 CURLFORM_NAMELENGTH, formName.size(),
+												 CURLFORM_CONTENTTYPE, formType.c_str(),
+												 CURLFORM_FILENAME, formFileName.c_str(),
                                                  CURLFORM_COPYCONTENTS, PA_LockHandle(h),
                                                  CURLFORM_CONTENTSLENGTH, PA_GetHandleSize(h),
-                                                 CURLFORM_CONTENTTYPE, formType.c_str(),
                                                  CURLFORM_END);
                                     
                                     PA_UnlockHandle(h);

@@ -281,7 +281,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 33}, {201, 499}}</string>
+							<string>{{0, 0}, {201, 499}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -328,7 +328,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D1E5AC27185B41FB00AA3BBD</string>
+										<string>D183F01818647E87003140A8</string>
 										<key>history</key>
 										<array>
 											<string>D16CE2C515A2C94D00F06EE6</string>
@@ -351,7 +351,7 @@
 											<string>D1E5ABC5185B1D3700AA3BBD</string>
 											<string>D1E5AC01185B3CE300AA3BBD</string>
 											<string>D1E5AC02185B3CE300AA3BBD</string>
-											<string>D1E5AC11185B3F2900AA3BBD</string>
+											<string>D19F187F18643DE700405D41</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -363,14 +363,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {750, 376}}</string>
+								<string>{{0, 0}, {750, 364}}</string>
 								<key>RubberWindowFrame</key>
 								<string>400 320 958 558 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>376pt</string>
+							<string>364pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -383,14 +383,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 381}, {750, 136}}</string>
+								<string>{{0, 369}, {750, 148}}</string>
 								<key>RubberWindowFrame</key>
 								<string>400 320 958 558 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>136pt</string>
+							<string>148pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -409,9 +409,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D1E5ABAE185B18CC00AA3BBD</string>
+				<string>D183F01118647D7A003140A8</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D1E5ABAF185B18CC00AA3BBD</string>
+				<string>D183F01218647D7A003140A8</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -549,15 +549,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D1E5AC25185B41FB00AA3BBD</string>
-		<string>D1E5AC26185B41FB00AA3BBD</string>
-		<string>D1E5AC13185B3F2900AA3BBD</string>
-		<string>D1E5ABFF185B3C6900AA3BBD</string>
-		<string>D1E5AC00185B3C6900AA3BBD</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>D16CE1A115A2C11D00F06EE6</string>
+		<string>D19F184918642FA600405D41</string>
 		<string>/Users/miyako/github-miyako/4d-plugin-oauth/OAuth/4D Plugin.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -582,7 +575,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>unzip.c</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -599,8 +592,6 @@
 							<string>110pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -640,7 +631,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D16CE1A115A2C11D00F06EE6</string>
-				<string>D1E5ABB3185B18CC00AA3BBD</string>
+				<string>D183F01418647D7A003140A8</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -762,13 +753,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>D1E5ABEF185B3C5100AA3BBD</string>
+				<string>D19F18591864365800405D41</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>D1E5ABF0185B3C5100AA3BBD</string>
-				<string>D1E5ABF1185B3C5100AA3BBD</string>
-				<string>D1E5ABF2185B3C5100AA3BBD</string>
-				<string>D1E5ABF3185B3C5100AA3BBD</string>
-				<string>D1E5ABF4185B3C5100AA3BBD</string>
+				<string>D19F185A1864365800405D41</string>
+				<string>D19F185B1864365800405D41</string>
+				<string>D19F185C1864365800405D41</string>
+				<string>D19F185D1864365800405D41</string>
+				<string>D19F185E1864365800405D41</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -922,7 +913,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>D1E5ABFD185B3C6900AA3BBD</string>
+				<string>D19F185F1864365800405D41</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
