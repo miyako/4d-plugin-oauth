@@ -1042,11 +1042,11 @@ void JSON_Parse_text(sLONG_PTR *pResult, PackagePtr pParams)
 	std::wstring w;
 	_copyString(&source, &w);
 	
-	JSONNODE *n = json_parse(w.c_str());
-	
-	_addJsonRootToList(n);
-	
-	_toHex(n, &returnValue);
+	if(json_is_valid(w.c_str())){
+		JSONNODE *n = json_parse(w.c_str());
+		_addJsonRootToList(n);
+		_toHex(n, &returnValue);
+	}
 	
 	returnValue.setReturn(pResult);
 }
