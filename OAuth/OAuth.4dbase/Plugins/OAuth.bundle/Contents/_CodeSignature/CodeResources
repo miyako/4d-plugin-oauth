@@ -22,7 +22,7 @@
 		</data>
 		<key>Resources/Documentation/content.html</key>
 		<data>
-		+HbzV6PpQUiNaeI8US2JrdZEaVE=
+		aQcjFH7VoPwLM7YURvLt9jmgSUQ=
 		</data>
 		<key>Resources/Documentation/index.html</key>
 		<data>
@@ -30,13 +30,13 @@
 		</data>
 		<key>Resources/Documentation/toc.html</key>
 		<data>
-		i1MgqnuK6zWlscDlI6CF/O4328A=
+		zvPEKBL853Goa0NboQOoDR0d9gI=
 		</data>
 		<key>Resources/English.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			C+tkAnWzQH04LES2U7cj9SIRGtI=
+			5dLG+VXi1DES9/RZVgT4kmUMynU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -51,7 +51,7 @@
 		</data>
 		<key>Resources/OAuth.rsrc</key>
 		<data>
-		pGCs4wQ5nkhzxbHRlRXJVy36uGc=
+		07K72HNhXGqjTRxkx56QSydEoyo=
 		</data>
 		<key>Resources/README (idn)</key>
 		<data>
@@ -75,15 +75,15 @@
 		</data>
 		<key>Resources/constants.xlf</key>
 		<data>
-		EW+I/eL+Kr2s1hGfCWWq1gP4nbg=
+		POhhfq4eLEC3DhZT/YDmZeoldLM=
 		</data>
 		<key>Resources/documentation.xml</key>
 		<data>
-		LengZcs2jjU5YGjhZI4UPs7F/kw=
+		GVK4KNyUH2+udU2h6o9CFJGb9aA=
 		</data>
 		<key>Resources/kmapper.xml</key>
 		<data>
-		hj9boNm1VGoFkX9ly3mkjPk2K6s=
+		xgTgnu2YGGF9CiVWG8HxB8btAlE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -92,7 +92,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			pf8IBmmMuli/KDMwy2kvNXHuC3Y=
+			c6K0cJZaITVZryHR2jAv+MKwSXE=
 			</data>
 			<key>requirement</key>
 			<string>identifier OAuth and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
@@ -101,7 +101,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			5GLWvZD5mqC6WD4i8/27/P0HjYE=
+			KmYrnWmnOvM7SpHRyf+yzA7Xdt4=
 			</data>
 			<key>requirement</key>
 			<string>identifier "libcrypto.1" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
@@ -110,7 +110,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			KXLt2bt93rGNYIdJMm8Jc+NA+fU=
+			OwyiV/fduLMKRxo+r0hNV7tKPTI=
 			</data>
 			<key>requirement</key>
 			<string>identifier "libcurl.7" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
@@ -119,7 +119,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			R0SVfY5il7a7lfxbKvcMPdYLSVU=
+			/kUn9SmM9bdHbjw/i9X+5nyHSkc=
 			</data>
 			<key>requirement</key>
 			<string>identifier "libidn.1" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
@@ -128,7 +128,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			zLodDI33ksFPXks8HUj4XOHffoQ=
+			/FVH+4eZTekFpoE9GeEBseKbRFw=
 			</data>
 			<key>requirement</key>
 			<string>identifier "libjson.7" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
@@ -137,7 +137,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			DIxXSIgHJaBj0r/GUf+v7RhM9Os=
+			q1hBWiA+7uPeblJiEKG4MB+McEk=
 			</data>
 			<key>requirement</key>
 			<string>identifier libssh2 and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
@@ -146,7 +146,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			5Dq7JCv5cEHev2AvwCgDGLI6RLg=
+			/RCYbIUv9wirl6Cfyarzf4Nkz24=
 			</data>
 			<key>requirement</key>
 			<string>identifier "libssl.1" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
@@ -155,7 +155,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			Xs6AMdspDyGBWO/fIP2Y01j4Dbs=
+			dzzCYZ2Q8sAXvTLQHHJp/M4ZXjY=
 			</data>
 			<key>requirement</key>
 			<string>identifier "libz.1" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Resources/Documentation/content.html</key>
 		<data>
-		+HbzV6PpQUiNaeI8US2JrdZEaVE=
+		aQcjFH7VoPwLM7YURvLt9jmgSUQ=
 		</data>
 		<key>Resources/Documentation/index.html</key>
 		<data>
@@ -186,13 +186,13 @@
 		</data>
 		<key>Resources/Documentation/toc.html</key>
 		<data>
-		i1MgqnuK6zWlscDlI6CF/O4328A=
+		zvPEKBL853Goa0NboQOoDR0d9gI=
 		</data>
 		<key>Resources/English.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			C+tkAnWzQH04LES2U7cj9SIRGtI=
+			5dLG+VXi1DES9/RZVgT4kmUMynU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -207,7 +207,7 @@
 		</data>
 		<key>Resources/OAuth.rsrc</key>
 		<data>
-		pGCs4wQ5nkhzxbHRlRXJVy36uGc=
+		07K72HNhXGqjTRxkx56QSydEoyo=
 		</data>
 		<key>Resources/README (idn)</key>
 		<data>
@@ -231,19 +231,19 @@
 		</data>
 		<key>Resources/constants.xlf</key>
 		<data>
-		EW+I/eL+Kr2s1hGfCWWq1gP4nbg=
+		POhhfq4eLEC3DhZT/YDmZeoldLM=
 		</data>
 		<key>Resources/documentation.xml</key>
 		<data>
-		LengZcs2jjU5YGjhZI4UPs7F/kw=
+		GVK4KNyUH2+udU2h6o9CFJGb9aA=
 		</data>
 		<key>Resources/kmapper.xml</key>
 		<data>
-		hj9boNm1VGoFkX9ly3mkjPk2K6s=
+		xgTgnu2YGGF9CiVWG8HxB8btAlE=
 		</data>
 		<key>Windows/OAuth.4DX</key>
 		<data>
-		SJTgZoZlxgh3a2ORwbPdgBLFJwg=
+		gHnu0r18jcRvDLdd136M7fHwMlg=
 		</data>
 		<key>Windows/OAuth.RSR</key>
 		<data>
@@ -291,7 +291,7 @@
 		</data>
 		<key>Windows64/OAuth.4DX</key>
 		<data>
-		d6YZaCzKckA/OCDV0Cmu/ZqJesk=
+		OvUsKwJvUPmx5DDB5fSBRqLB2jg=
 		</data>
 		<key>Windows64/OAuth.RSR</key>
 		<data>

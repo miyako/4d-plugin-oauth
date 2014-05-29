@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A270F560-60B7-4084-A9A8-35FD612E476F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>4D Plugin</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF6A0812-E2FF-4C19-95F8-20ECD9D5BEAB</key>
+		<string>https://github.com/miyako/4d-plugin-oauth.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OAuth/4D Plugin.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF6A0812-E2FF-4C19-95F8-20ECD9D5BEAB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/miyako/4d-plugin-oauth.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF6A0812-E2FF-4C19-95F8-20ECD9D5BEAB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF6A0812-E2FF-4C19-95F8-20ECD9D5BEAB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>4d-plugin-oauth</string>
+		</dict>
+	</array>
+</dict>
+</plist>

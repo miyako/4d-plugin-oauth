@@ -693,7 +693,7 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 						break;
 					case 187://CURLOPT_MAIL_RCPT
                         
-						for(unsigned int p = 0, n; p <= value.length(); p = n + 1){
+						for(size_t p = 0, n; p <= value.length(); p = n + 1){
 							
 							n = value.find_first_of((const uint8_t *)",", p);
 							if(n == CUTF8String::npos) n = value.length();
@@ -707,7 +707,7 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 						break;
 					case 28://CURLOPT_QUOTE
                         
-						for(unsigned int p = 0, n; p <= value.length(); p = n + 1){
+						for(size_t p = 0, n; p <= value.length(); p = n + 1){
 							
 							n = value.find_first_of((const uint8_t *)",", p);
 							if(n == CUTF8String::npos) n = value.length();
@@ -721,7 +721,7 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 						break;
 					case 39://CURLOPT_POSTQUOTE
                         
-						for(unsigned int p = 0, n; p <= value.length(); p = n + 1){
+						for(size_t p = 0, n; p <= value.length(); p = n + 1){
 							
 							n = value.find_first_of((const uint8_t *)",", p);
 							if(n == CUTF8String::npos) n = value.length();
@@ -735,7 +735,7 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 						break;
 					case 93://CURLOPT_PREQUOTE
                         
-						for(unsigned int p = 0, n; p <= value.length(); p = n + 1){
+						for(size_t p = 0, n; p <= value.length(); p = n + 1){
 							
 							n = value.find_first_of((const uint8_t *)",", p);
 							if(n == CUTF8String::npos) n = value.length();
@@ -749,7 +749,7 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 						break;
 					case 203://CURLOPT_RESOLVE
                         
-						for(unsigned int p = 0, n; p <= value.length(); p = n + 1){
+						for(size_t p = 0, n; p <= value.length(); p = n + 1){
 							
 							n = value.find_first_of((const uint8_t *)",", p);
 							if(n == CUTF8String::npos) n = value.length();
@@ -763,7 +763,7 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
 						break;
 					case 104://CURLOPT_HTTP200ALIASES
                         
-						for(unsigned int p = 0, n; p <= value.length(); p = n + 1){
+						for(size_t p = 0, n; p <= value.length(); p = n + 1){
 							
 							n = value.find_first_of((const uint8_t *)",", p);
 							if(n == CUTF8String::npos) n = value.length();

@@ -15,6 +15,11 @@
 <p>This plugin is a combined edition of the cURL, JSON, ZIP, Common Crypto and MISC plugins.
 It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <p>Note: The plugin commands IDs have shift since the introduction of PKCS and RSA commands. If you have an old version of the plugin in your structure, remove it, reopen (to reset the tokens) install the new plugin and open again.</p>
+<p>Change list for 2014-05-29</p>
+<p>New Command</p>
+<p>
+<a href="#command:7,74">RSASHA1</a>
+</p>
 <p>Change list for 2013-12-13</p>
 <p>New Constant</p>
 <p>
@@ -1179,6 +1184,25 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 </p>
 <ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
 <!-- write documentation for cURL Unescape url here -->
+</ex4D:command-description>
+<a name="command:7"></a>
+<h2>Common Crypto II</h2>
+<a name="command:7,74"></a>
+<h3>RSASHA1</h3>
+<p>
+<code>TEXT:=RSASHA1 (BLOB; BLOB; LONGINT)</code>
+</p>
+<p>
+<code>returnValue</code> (TEXT)<br>
+<ex4D:return-value label="" type="T" xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for return value (TEXT) here-->
+</ex4D:return-value>
+</p>
+<p>
+<span class="title">Discussion</span>
+</p>
+<ex4D:command-description xmlns:ex4D="http://www.4d.com/plugin">
+<!-- write documentation for RSASHA1 here -->
 </ex4D:command-description>
 <a name="constant:1"></a>
 <h2>Known Folder Path</h2>
@@ -2607,6 +2631,6 @@ It includes all the functions necessary to implement OAuth 1.0 and 2.0. </p>
 <!-- write documentation for CURLINFO_SSL_DATA_OUT (6) here-->
 </ex4D:constant>
 <p class="footer">
-<span class="title">Documentation Update: </span>2013-12-13T13:26:4109:00</p>
+<span class="title">Documentation Update: </span>2014-05-29T06:55:3409:00</p>
 </body>
 </html>

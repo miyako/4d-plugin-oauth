@@ -36,4 +36,7 @@
    <command name="SHA256" str="20000" topic="68">
       <param position="2" k="20004"/>
    </command>
+   <command name="RSASHA1" str="20000" topic="74">
+      <param position="3" k="20004"/>
+   </command>
 </application>

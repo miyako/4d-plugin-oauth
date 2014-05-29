@@ -15,3 +15,6 @@ void SHA256(sLONG_PTR *pResult, PackagePtr pParams);
 
 // --- PKCS
 void PEM_From_P12(sLONG_PTR *pResult, PackagePtr pParams);
+
+// --- Common Crypto II
+void RSASHA1(sLONG_PTR *pResult, PackagePtr pParams);

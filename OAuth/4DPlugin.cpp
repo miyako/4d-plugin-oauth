@@ -391,6 +391,8 @@ void CommandDispatcher (int32_t pProcNum, sLONG_PTR *pResult, PackagePtr pParams
 		case 73 :
 			cURL_Get_date(pResult, pParams);
 			break;
-			
+		case 74 :
+			RSASHA1(pResult, pParams);
+			break;			
 	}
 }

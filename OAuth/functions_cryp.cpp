@@ -488,3 +488,58 @@ void RSASHA256(sLONG_PTR *pResult, PackagePtr pParams)
 	
 	returnValue.setReturn(pResult);
 }
+
+void RSASHA1(sLONG_PTR *pResult, PackagePtr pParams)
+{
+	C_BLOB Param1;
+	C_BLOB Param2;
+	C_LONGINT Param3;
+	C_TEXT returnValue;
+    
+	Param1.fromParamAtIndex(pParams, 1);
+	Param2.fromParamAtIndex(pParams, 2);
+	Param3.fromParamAtIndex(pParams, 3);
+	
+	uint8_t *buf = (uint8_t *)calloc(20, sizeof(uint8_t)); 
+	
+	CC_SHA1((unsigned char *)Param1.getBytesPtr(), Param1.getBytesLength(), buf);	    
+    
+    unsigned int signatureLength = 0;
+    
+	BIO *bio = BIO_new_mem_buf((void *)Param2.getBytesPtr(), Param2.getBytesLength());
+	
+	if(bio){
+		
+		RSA *key = NULL;
+		key = PEM_read_bio_RSAPrivateKey(bio, NULL, NULL, NULL);	
+		
+		if(key){
+			
+			uint8_t *sgn = (uint8_t *)calloc(RSA_size(key), sizeof(uint8_t)); 
+			
+			if(RSA_sign(NID_sha1, buf, 20, sgn, &signatureLength, key)){
+				
+				C_BLOB temp;
+				temp.setBytes((const uint8_t *)sgn, signatureLength);
+				
+				switch (Param3.getIntValue()) 
+				{
+					case 1:
+						temp.toB64Text(&returnValue);	
+						break;
+					default:
+						temp.toHexText(&returnValue);	
+						break;
+				}
+			}
+			
+			free(sgn);
+		}
+		
+		BIO_free(bio);
+	}
+    
+	free(buf);
+	
+	returnValue.setReturn(pResult);
+}
