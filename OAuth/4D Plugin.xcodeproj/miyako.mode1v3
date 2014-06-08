@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>D135B752193768F100FA5F78</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>functions_curl.cpp</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>D135B753193768F100FA5F78</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>functions_curl.cpp</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>D1BEAFC819376DC5003C3E3F</string>
-						<key>history</key>
-						<array>
-							<string>D135B762193768F100FA5F78</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1063, 712}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>311 125 1063 753 0 0 1440 878 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -370,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D1BEAFC519376DC5003C3E3F</string>
+										<string>D1BEAFCA193775FD003C3E3F</string>
 										<key>history</key>
 										<array>
 											<string>D16CE2C515A2C94D00F06EE6</string>
@@ -593,8 +552,6 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>D16CE1A115A2C11D00F06EE6</string>
-		<string>D135B752193768F100FA5F78</string>
-		<string>/Users/miyako/github-miyako/4d-plugin-oauth/OAuth/4D Plugin.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>294 320 958 558 0 0 1440 878 </string>
