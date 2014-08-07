@@ -660,17 +660,18 @@ void PATH_From_user_selection(sLONG_PTR *pResult, PackagePtr pParams)
 	}else{// use deprecatead api for 10.5 or earlier
 */		
 		NSURL *folderUrl = (NSURL *)CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)folder, kCFURLHFSPathStyle, true);
-		NSString *folderName = NULL;
 	
 		if(folderUrl)
 		{
-			folderName = (NSString *)CFURLCopyFileSystemPath((CFURLRef)folderUrl, kCFURLPOSIXPathStyle);
+			NSString *folderName = (NSString *)CFURLCopyFileSystemPath((CFURLRef)folderUrl, kCFURLPOSIXPathStyle);
 			savePanel.path = folderName;
+			[folderName release];
 			[folderUrl release];			
+		}else{
+			savePanel.path = @"";
 		}			
 		
 		PA_RunInMainProcess((PA_RunInMainProcessProcPtr)_runModalLegacy, (void *)&savePanel);
-		if(folderName)	[folderName release];
 //	}
 	
 	if(savePanel.result == NSFileHandlingPanelOKButton)
@@ -678,7 +679,8 @@ void PATH_From_user_selection(sLONG_PTR *pResult, PackagePtr pParams)
 		NSURL *url = [panel URL];
 		if(url)
 		{
-			NSString *path = (NSString *)CFURLCopyFileSystemPath((CFURLRef)url, kCFURLHFSPathStyle);
+			NSMutableString *path = [[NSMutableString alloc]initWithString:(NSString *)CFURLCopyFileSystemPath((CFURLRef)url, kCFURLHFSPathStyle)];
+			CFStringNormalize((CFMutableStringRef)path, kCFStringNormalizationFormC);
 			returnValue.setUTF16String(path);
 			[path release];
 		}
