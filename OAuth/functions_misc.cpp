@@ -628,6 +628,7 @@ void PATH_From_user_selection(sLONG_PTR *pResult, PackagePtr pParams)
 	NSString *file = fileName.copyUTF16String();
 	NSString *folder = folderPath.copyUTF16String();
 	NSString *titleString = title.copyUTF16String();
+	NSString *folderName = @"";
 	
 	NSSavePanel *panel = [NSSavePanel savePanel];
 	
@@ -663,13 +664,11 @@ void PATH_From_user_selection(sLONG_PTR *pResult, PackagePtr pParams)
 	
 		if(folderUrl)
 		{
-			NSString *folderName = (NSString *)CFURLCopyFileSystemPath((CFURLRef)folderUrl, kCFURLPOSIXPathStyle);
-			savePanel.path = folderName;
-			[folderName release];
+			folderName = (NSString *)CFURLCopyFileSystemPath((CFURLRef)folderUrl, kCFURLPOSIXPathStyle);
 			[folderUrl release];			
-		}else{
-			savePanel.path = @"";
-		}			
+		}	
+	
+		savePanel.path = folderName;
 		
 		PA_RunInMainProcess((PA_RunInMainProcessProcPtr)_runModalLegacy, (void *)&savePanel);
 //	}
@@ -685,7 +684,8 @@ void PATH_From_user_selection(sLONG_PTR *pResult, PackagePtr pParams)
 			[path release];
 		}
 	}	
-	
+
+	[folderName release];	
 	[file release];	
 	[folder release];
 	[titleString release];
