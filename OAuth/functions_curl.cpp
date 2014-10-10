@@ -928,13 +928,14 @@ void _cURL(sLONG_PTR *pResult, PackagePtr pParams)
         if(values_CURLOPT_HTTPHEADER) curl_easy_setopt(curl, CURLOPT_HTTPHEADER, values_CURLOPT_HTTPHEADER);
         
         curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 1);
-        
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         
-        //error = curl_easy_perform(curl);
 		void (*_PA_YieldAbsolute)(void) = PA_YieldAbsolute;
-        error = curl_easy_perform_with_yield(curl, _PA_YieldAbsolute);
-        
+#if VERSIONMAC
+        error = curl_easy_perform(curl, _PA_YieldAbsolute);
+#else
+		error = curl_easy_perform_with_yield(curl, _PA_YieldAbsolute);
+#endif
         if(values_CURLOPT_MAIL_RCPT) curl_slist_free_all(values_CURLOPT_MAIL_RCPT);
         
         if(values_CURLOPT_QUOTE) curl_slist_free_all(values_CURLOPT_QUOTE);

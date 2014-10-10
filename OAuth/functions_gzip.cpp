@@ -255,6 +255,8 @@ void Zip(sLONG_PTR *pResult, PackagePtr pParams)
                     
                     while(ifs_crc.good()){
                         
+						PA_YieldAbsolute();
+						
                         ifs_crc.read((char *)&buf[0], BUFFER_SIZE);
                         
                         CRC = crc32(CRC, (const Bytef *)&buf[0], ifs_crc.gcount());
@@ -358,6 +360,8 @@ void Unzip(sLONG_PTR *pResult, PackagePtr pParams)
 		zstring absolutePathName;
 		
 		do {
+			
+			PA_YieldAbsolute();
 			
 			if (unzGetCurrentFileInfo64(hUnzip, &fileInfo, (char *)&szConFilename[0], PATH_MAX, NULL, 0, NULL, 0) != UNZ_OK){
                 returnValue.setIntValue(0);

@@ -2,7 +2,7 @@
 #include "4DPlugin.h"
 
 #if VERSIONMAC
-#include <iconv.h>
+#include "iconv.h"
 #if PA_SMALLENDIAN
 #define UTF32NATIVE "UTF-32LE"
 #else

@@ -1,4 +1,8 @@
+#if VERSIONMAC
 #include "curl/curl.h"
+#else
+#include "windows/curl/curl.h"
+#endif
 #include "4DPluginAPI.h"
 #include "4DPlugin.h"
 
