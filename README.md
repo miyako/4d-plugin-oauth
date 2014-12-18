@@ -17,6 +17,24 @@ $err:=cURL ("ftp://ftp.4d.com/Favicon.ico";$tNomOption;$tValOption;$in;$out)
 BLOB TO DOCUMENT(System folder(Desktop)+"Favicon.ico";$out)
 ```
 
+* FTP (upload a file)
+```
+C_BLOB($in;$out)
+C_LONGINT($err)
+ARRAY LONGINT($tNomOption;0)
+ARRAY TEXT($tValOption;0)
+APPEND TO ARRAY($tNomOption;CURLOPT_USERNAME)
+APPEND TO ARRAY($tValOption;"user")
+APPEND TO ARRAY($tNomOption;CURLOPT_PASSWORD)
+APPEND TO ARRAY($tValOption;"pass")
+APPEND TO ARRAY($tNomOption;CURLOPT_UPLOAD)
+APPEND TO ARRAY($tValOption;"1")
+
+DOCUMENT TO BLOB(Structure file;$in)
+
+$err:=cURL ("ftp://ftp.4d.com/test.4db";$tNomOption;$tValOption;$in;$out)
+```
+
 * SFTP
 
 ```
