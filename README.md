@@ -5,6 +5,17 @@ Collection of functions to help implement OAuth in the 4D language.
 
 Example
 -------
+* FTP (download a file)
+```
+C_BLOB($in;$out)
+C_LONGINT($err)
+ARRAY LONGINT($tNomOption;0)
+ARRAY TEXT($tValOption;0)
+
+$err:=cURL ("ftp://ftp.4d.com/Favicon.ico";$tNomOption;$tValOption;$in;$out)
+
+BLOB TO DOCUMENT(System folder(Desktop)+"Favicon.ico";$out)
+```
 
 * SFTP
 
