@@ -3,6 +3,16 @@
 
 Collection of functions to help implement OAuth in the 4D language.
 
+***Deprecated***
+
+Please use 
+
+[https://github.com/miyako/4d-plugin-zip]
+
+[https://github.com/miyako/4d-plugin-curl]
+
+[https://github.com/miyako/4d-plugin-common-crypto]
+
 ##Platform
 
 | carbon | cocoa | win32 | win64 |
