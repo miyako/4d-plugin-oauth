@@ -17,6 +17,10 @@ https://github.com/miyako/4d-plugin-json
 
 https://github.com/miyako/4d-plugin-split-pictures
 
+[Generate digest](http://doc.4d.com/4Dv15/4D/15/Generate-digest.301-2006181.en.html)
+
+[Select document](http://doc.4d.com/4Dv15/4D/15.1/Select-document.301-2685312.en.html)
+
 ##Platform
 
 | carbon | cocoa | win32 | win64 |
