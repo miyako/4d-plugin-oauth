@@ -13,6 +13,8 @@ https://github.com/miyako/4d-plugin-curl
 
 https://github.com/miyako/4d-plugin-common-crypto
 
+https://github.com/miyako/4d-plugin-json
+
 ##Platform
 
 | carbon | cocoa | win32 | win64 |
