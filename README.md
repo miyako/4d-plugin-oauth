@@ -15,6 +15,8 @@ https://github.com/miyako/4d-plugin-common-crypto
 
 https://github.com/miyako/4d-plugin-json
 
+https://github.com/miyako/4d-plugin-split-pictures
+
 ##Platform
 
 | carbon | cocoa | win32 | win64 |
