@@ -107,7 +107,7 @@ STACK_Get_available_size
 PICTURE_GET_RAW_DATA
 ```
 
-Example
+Examples
 -------
 * FTP (download a file)
 ```
