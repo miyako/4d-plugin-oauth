@@ -23,12 +23,6 @@ https://github.com/miyako/4d-plugin-split-pictures
 
 [GET MEMORY STATISTICS](http://doc.4d.com/4Dv15/4D/15.1/GET-MEMORY-STATISTICS.301-2686331.en.html)
 
-##Platform
-
-| carbon | cocoa | win32 | win64 |
-|:------:|:-----:|:---------:|:---------:|
-|🆗|🚫|🆗|🆗|
-
 Commands
 ---
 
